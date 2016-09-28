@@ -25,19 +25,24 @@ public class DB {
         try {
             Class.forName("org.hsqldb.jdbcDriver");
             connection = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
-//            connection.prepareStatement("DROP table barcodes if EXISTS ,").execute();
+            connection.prepareStatement("DROP table station if EXISTS ;").execute();
+            connection.prepareStatement("DROP table users if EXISTS ;").execute();
+            connection.prepareStatement("DROP table travelpass if EXISTS ;").execute();
+            connection.prepareStatement("DROP table history if EXISTS ;").execute();
+            connection.prepareStatement("DROP table topup if EXISTS ;").execute();
+            connection.prepareStatement("DROP table topuphistory if EXISTS ;").execute();
             connection.prepareStatement("CREATE table station (name VARCHAR (20), zone INTEGER );").execute();
-            connection.prepareStatement("CREATE TABLE users (userID VARCHAR (20), userName VARCHAR (40),balance double, email VARCHAR (50),type CHAR,PRIMARY key (userID));").execute();
-            connection.prepareStatement("CREATE TABLE travelpass(passid VARCHAR (20),zone INTEGER ,price DOUBLE ,duration char,type char,time DATA ,PRIMARY key (passid));").execute();
+            connection.prepareStatement("CREATE TABLE users (userID VARCHAR (20), userName VARCHAR (40),balance FLOAT , email VARCHAR (50),tickettype CHAR,PRIMARY key (userID));").execute();
+            connection.prepareStatement("CREATE TABLE travelpass(passid VARCHAR (20),zone INTEGER ,price FLOAT ,duration char,tickettype char,time DATE ,PRIMARY key (passid));").execute();
             connection.prepareStatement("CREATE TABLE history(passid VARCHAR (20),userid VARCHAR (20),PRIMARY key (passid,userid),FOREIGN KEY (passid) REFERENCES travelpass(passid),FOREIGN KEY (userid) REFERENCES users(userid));").execute();
-            connection.prepareStatement("CREATE TABLE topup(topupid VARCHAR (20),balance double,topuptime date,PRIMARY key(topupid));").execute();
+            connection.prepareStatement("CREATE TABLE topup(topupid VARCHAR (20),balance FLOAT ,topuptime date,PRIMARY key(topupid));").execute();
             connection.prepareStatement("CREATE TABLE topuphistory(userid VARCHAR (20),topupid VARCHAR (20),PRIMARY KEY (userid,topupid),FOREIGN key(userid) REFERENCES users(userid),FOREIGN KEY (topupid) REFERENCES topup(topupid));").execute();
             Statement insertStation = connection.createStatement();
             insertStation.addBatch("insert into station values ('Central', 1);");
             insertStation.addBatch("insert into station values ('Flagstaff', 1);");
-            insertStation.addBatch("INSERT into station values ('Richmond',1)");
-            insertStation.addBatch("insert into station values ('Lilydale',2)");
-            insertStation.addBatch("insert into station values ('Epping',2)");
+            insertStation.addBatch("INSERT into station values ('Richmond',1);");
+            insertStation.addBatch("insert into station values ('Lilydale',2);");
+            insertStation.addBatch("insert into station values ('Epping',2);");
             insertStation.executeBatch();
             connection.prepareStatement("insert into users values ('lc','Lawrence Cavedon',0,'lawrence.cavedon@rmit.edu.au','A');").execute();
             connection.prepareStatement("insert into users values ('abc','abcde',40.0,'abcdefg','C');").execute();
@@ -92,7 +97,7 @@ public class DB {
         double balance = -1;
         try {
             Connection getBalance = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
-            String statement = "select balance from users where userid = " + userID + ";";
+            String statement = "select balance from users where userid = '" + userID + "';";
             ResultSet balanceGetter = getBalance.createStatement().executeQuery(statement);
             while (balanceGetter.next()) {
                 balance = balanceGetter.getDouble(1);
@@ -110,7 +115,7 @@ public class DB {
         try {
             Connection topUp = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Statement st = topUp.createStatement();
-            ResultSet rs = st.executeQuery("select balance from users where userid = " + id + ";");
+            ResultSet rs = st.executeQuery("select balance from users where userid = '" + id + "';");
             while (rs.next()) {
                 balance = rs.getDouble(1);
             }
@@ -123,6 +128,7 @@ public class DB {
             st.execute(statement2);
             st.execute(statement3);
             topUpID++;
+            topUp.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -141,4 +147,8 @@ public class DB {
 //    public ArrayList selectTopUpHistory(String userID){
 //
 //    }
+
+    public static void main(String []args){
+        startDB();
+    }
 }

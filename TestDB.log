@@ -1,0 +1,27 @@
+/*C3*/SET SCHEMA PUBLIC
+DROP table station if EXISTS 
+DROP table users if EXISTS 
+DROP table travelpass if EXISTS 
+DROP table history if EXISTS 
+DROP table topup if EXISTS 
+DROP table topuphistory if EXISTS 
+CREATE table station (name VARCHAR (20), zone INTEGER )
+CREATE TABLE users (userID VARCHAR (20), userName VARCHAR (40),balance FLOAT , email VARCHAR (50),tickettype CHAR,PRIMARY key (userID))
+CREATE TABLE travelpass(passid VARCHAR (20),zone INTEGER ,price FLOAT ,duration char,tickettype char,time DATE ,PRIMARY key (passid))
+CREATE TABLE history(passid VARCHAR (20),userid VARCHAR (20),PRIMARY key (passid,userid),FOREIGN KEY (passid) REFERENCES travelpass(passid),FOREIGN KEY (userid) REFERENCES users(userid))
+CREATE TABLE topup(topupid VARCHAR (20),balance FLOAT ,topuptime date,PRIMARY key(topupid))
+CREATE TABLE topuphistory(userid VARCHAR (20),topupid VARCHAR (20),PRIMARY KEY (userid,topupid),FOREIGN key(userid) REFERENCES users(userid),FOREIGN KEY (topupid) REFERENCES topup(topupid))
+INSERT INTO STATION VALUES('Central',1)
+COMMIT
+INSERT INTO STATION VALUES('Flagstaff',1)
+COMMIT
+INSERT INTO STATION VALUES('Richmond',1)
+COMMIT
+INSERT INTO STATION VALUES('Lilydale',2)
+COMMIT
+INSERT INTO STATION VALUES('Epping',2)
+COMMIT
+INSERT INTO USERS VALUES('lc','Lawrence Cavedon',0.0E0,'lawrence.cavedon@rmit.edu.au','A')
+COMMIT
+INSERT INTO USERS VALUES('abc','abcde',40.0E0,'abcdefg','C')
+COMMIT
