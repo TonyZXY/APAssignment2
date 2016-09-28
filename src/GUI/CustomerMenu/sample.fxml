@@ -18,7 +18,7 @@
                <children>
                   <Label layoutX="54.0" layoutY="45.0" prefHeight="71.0" prefWidth="128.0" text="MyTi System" />
                   <Label fx:id="currentTime" layoutX="100.0" layoutY="403.0" text="Label" />
-                  <TextField layoutX="35.0" layoutY="268.0" />
+                  <TextField fx:id="UserID" layoutX="35.0" layoutY="268.0" onAction="#inputID" />
                   <Label layoutX="61.0" layoutY="232.0" text="Enter Your ID here" />
                   <Button layoutX="80.0" layoutY="309.0" mnemonicParsing="false" text="Continue" />
                </children>
@@ -39,12 +39,12 @@
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="149.0" prefWidth="125.0" />
                     </content>
                   </ScrollPane>
-                  <CheckBox layoutX="362.0" layoutY="90.0" mnemonicParsing="false" text="2 hours" />
-                  <CheckBox layoutX="362.0" layoutY="116.0" mnemonicParsing="false" text="Day pass" />
+                  <CheckBox fx:id="twoHours" layoutX="362.0" layoutY="90.0" mnemonicParsing="false" onAction="#twoHours" text="2 hours" />
+                  <CheckBox fx:id="dayPass" layoutX="362.0" layoutY="116.0" mnemonicParsing="false" onAction="#dayPass" text="Day pass" />
                   <Label layoutX="361.0" layoutY="63.0" text="Pass length" />
                   <Label layoutX="362.0" layoutY="150.0" text="Pass Type" />
-                  <CheckBox layoutX="362.0" layoutY="173.0" mnemonicParsing="false" text="Zone 1" />
-                  <CheckBox layoutX="362.0" layoutY="200.0" mnemonicParsing="false" text="Zone 1+2" />
+                  <CheckBox fx:id="zoneOne" layoutX="362.0" layoutY="173.0" mnemonicParsing="false" onAction="#zoneOne" text="Zone 1" />
+                  <CheckBox fx:id="ZoneTwo" layoutX="362.0" layoutY="200.0" mnemonicParsing="false" onAction="#ZoneTwo" text="Zone 1+2" />
                   <Button fx:id="btnTopUp" layoutX="302.0" layoutY="25.0" mnemonicParsing="false" onAction="#toTopUpMeny" text="TopUp" />
                   <ScrollPane layoutX="31.0" layoutY="264.0" prefHeight="64.0" prefWidth="122.0">
                     <content>
@@ -53,10 +53,10 @@
                   </ScrollPane>
                   <Label layoutX="30.0" layoutY="241.0" text="Day" />
                   <Label layoutX="173.0" layoutY="241.0" text="Time" />
-                  <TextField layoutX="174.0" layoutY="269.0" prefHeight="27.0" prefWidth="113.0" />
-                  <Button layoutX="31.0" layoutY="366.0" mnemonicParsing="false" text="Add Jounary" />
-                  <Button layoutX="31.0" layoutY="417.0" mnemonicParsing="false" text="Purchase Pass" />
-                  <TextArea layoutX="162.0" layoutY="356.0" prefHeight="88.0" prefWidth="201.0" />
+                  <TextField fx:id="Time" layoutX="174.0" layoutY="269.0" onAction="#Time" prefHeight="27.0" prefWidth="113.0" />
+                  <Button fx:id="takeJounary" layoutX="31.0" layoutY="366.0" mnemonicParsing="false" onAction="#takeJounary" text="Add Jounary" />
+                  <Button fx:id="purchase" layoutX="31.0" layoutY="417.0" mnemonicParsing="false" onAction="#purchase" text="Purchase Pass" />
+                  <TextArea fx:id="out" layoutX="162.0" layoutY="356.0" prefHeight="88.0" prefWidth="201.0" />
                   <Button layoutX="428.0" layoutY="283.0" mnemonicParsing="false" text="Save" />
                   <Button layoutX="428.0" layoutY="343.0" mnemonicParsing="false" text="Quit" />
                </children>

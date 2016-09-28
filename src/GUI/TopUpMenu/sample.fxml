@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MainMenu.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="500.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="54.0" layoutY="45.0" prefHeight="71.0" prefWidth="128.0" text="MyTi System" />
+                  <Label fx:id="currentTime" layoutX="100.0" layoutY="403.0" text="Time" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="51.0" layoutY="49.0" text="Current ID" />
+                  <Label layoutX="51.0" layoutY="87.0" text="Current Balance" />
+                  <Label layoutX="51.0" layoutY="141.0" text="TopUp Balance" />
+                  <TextField layoutX="51.0" layoutY="180.0" prefHeight="27.0" prefWidth="128.0" />
+                  <Button layoutX="51.0" layoutY="236.0" mnemonicParsing="false" text="TopUp" />
+                  <Button layoutX="139.0" layoutY="236.0" mnemonicParsing="false" text="Cancel" />
+                  <Label layoutX="300.0" layoutY="79.0" text="Remender:" />
+                  <Label layoutX="300.0" layoutY="115.0" text="One ID can hold less than $100 cridit" />
+                  <Label layoutX="300.0" layoutY="150.0" text="Top Up balance need to be " />
+                  <Label layoutX="300.0" layoutY="172.0" text="in precise multiples of $5.00." />
+                  <Label layoutX="183.0" layoutY="49.0" text="id" />
+                  <Label layoutX="178.0" layoutY="88.0" text="balance" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</GridPane>
