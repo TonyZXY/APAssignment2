@@ -3,6 +3,7 @@ package Fileio;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.sql.Timestamp;
 
 import org.hsqldb.Server;
 
@@ -33,9 +34,9 @@ public class DB {
             connection.prepareStatement("DROP table topuphistory if EXISTS ;").execute();
             connection.prepareStatement("CREATE table station (name VARCHAR (20), zone INTEGER );").execute();
             connection.prepareStatement("CREATE TABLE users (userID VARCHAR (20), userName VARCHAR (40),balance FLOAT , email VARCHAR (50),tickettype CHAR,PRIMARY key (userID));").execute();
-            connection.prepareStatement("CREATE TABLE travelpass(passid VARCHAR (20),zone INTEGER ,price FLOAT ,duration char,tickettype char,time DATE ,PRIMARY key (passid));").execute();
+            connection.prepareStatement("CREATE TABLE travelpass(passid VARCHAR (20),pricetype INTEGER ,price FLOAT ,tickettype char,time TIMESTAMP ,PRIMARY key (passid));").execute();
             connection.prepareStatement("CREATE TABLE history(passid VARCHAR (20),userid VARCHAR (20),PRIMARY key (passid,userid),FOREIGN KEY (passid) REFERENCES travelpass(passid),FOREIGN KEY (userid) REFERENCES users(userid));").execute();
-            connection.prepareStatement("CREATE TABLE topup(topupid VARCHAR (20),balance FLOAT ,topuptime date,PRIMARY key(topupid));").execute();
+            connection.prepareStatement("CREATE TABLE topup(topupid VARCHAR (20),balance FLOAT ,topuptime TIMESTAMP ,PRIMARY key(topupid));").execute();
             connection.prepareStatement("CREATE TABLE topuphistory(userid VARCHAR (20),topupid VARCHAR (20),PRIMARY KEY (userid,topupid),FOREIGN key(userid) REFERENCES users(userid),FOREIGN KEY (topupid) REFERENCES topup(topupid));").execute();
             Statement insertStation = connection.createStatement();
             insertStation.addBatch("insert into station values ('Central', 1);");
@@ -62,7 +63,8 @@ public class DB {
     public void addTravelPassDB(String usersID, int zone, char type, char duration, Calendar date, double price) {
         try {
             Connection addTravel = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
-            String statement = "insert into travelpass values ( '" + travelPassID + "','" + zone + "','" + price + "','" + duration + "','" + type + "','" + date.getTime() + "');";
+            Timestamp ts = new Timestamp(date.getTimeInMillis());
+            String statement = "insert into travelpass values ( '" + travelPassID + "','" + zone + "','" + price + "','" + duration + "','" + type + "','" + ts + "');";
             addTravel.prepareStatement(statement).execute();
             String statement2 = "insert into history values ('" + travelPassID + "','" + usersID + "');";
             addTravel.prepareStatement(statement2).execute();
@@ -125,7 +127,8 @@ public class DB {
             String statement1 = "UPDATE users SET balance=" + "'" + addBalance + "'" + " where userid =" + "'" + id + "';";
             st.executeUpdate(statement1);
             Calendar calendar = Calendar.getInstance();
-            String statement2 = "insert into topup('" + topUpID + "','" + balance + "','" + calendar.getTime() + "');";
+            Timestamp ts = new Timestamp(calendar.getTimeInMillis());
+            String statement2 = "insert into topup('" + topUpID + "','" + balance + "','" + ts + "');";
             String statement3 = "insert into topuphistory('" + id + "','" + topUpID + "');";
             st.execute(statement2);
             st.execute(statement3);
@@ -150,7 +153,7 @@ public class DB {
 //
 //    }
 
-    public static void main(String []args){
+    public static void main(String[] args) {
         startDB();
     }
 }
