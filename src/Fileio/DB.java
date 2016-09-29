@@ -139,6 +139,21 @@ public class DB {
         }
     }
 
+    public void topUpReport(String id){
+        try{
+            Connection tpr = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            Statement st = tpr.createStatement();
+            ResultSet rs = st.executeQuery("SELECT topupid FROM topuphistory WHERE userid ='"+id+"' NATURAL JOIN topup");
+            System.out.println("TopUp history is here");
+            while (rs.next()){
+                System.out.println(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getString(4));
+            }
+            tpr.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
     public boolean checkValidTicket(String userID) {
         boolean valid = false;

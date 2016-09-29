@@ -8,8 +8,12 @@ import java.util.Calendar;
 public class TravelPass {
     //    Date date;
     private Calendar calendar;
-    private char Duration;
-    private int zone;
+
+    public int getTicketType() {
+        return ticketType;
+    }
+
+    private int ticketType;
 
     public String getStartName() {
         return startName;
@@ -33,21 +37,19 @@ public class TravelPass {
     private String endName;
     private char type;
 
-    public TravelPass(Calendar calendar, char duration, int zone, String startName, String endName, char type,double price) {
+    public TravelPass(Calendar calendar, int ticketType, String startName, String endName, char type,double price) {
         this.startName = startName;
         this.endName = endName;
         this.type = type;
 //        this.date = date;
         this.calendar = calendar;
-        this.Duration = duration;
-        this.zone = zone;
+        this.ticketType = ticketType;
         this.price=price;
     }
 
-    public TravelPass(Calendar calendar, char duration, int zone, String startName, char type,double price) {
+    public TravelPass(Calendar calendar, int ticketType, String startName, char type,double price) {
         this.startName = startName;
-        this.Duration = duration;
-        this.zone = zone;
+        this.ticketType = ticketType;
         this.type = type;
         this.calendar = calendar;
         this.price=price;
@@ -56,14 +58,6 @@ public class TravelPass {
 
     public Calendar getCalendar() {
         return calendar;
-    }
-
-    public char getDuration() {
-        return Duration;
-    }
-
-    public int getZone() {
-        return zone;
     }
 
 }
