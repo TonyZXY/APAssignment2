@@ -39,10 +39,12 @@ public class DB {
             connection.prepareStatement("CREATE TABLE topuphistory(userid VARCHAR (20),topupid VARCHAR (20),PRIMARY KEY (userid,topupid),FOREIGN key(userid) REFERENCES users(userid),FOREIGN KEY (topupid) REFERENCES topup(topupid));").execute();
             Statement insertStation = connection.createStatement();
             insertStation.addBatch("insert into station values ('Central', 1);");
+            //我是全世界最美最可爱的优娜娜，我是来捣乱的，我也不知道我写的是什么j8玩意儿，棒棒。
             insertStation.addBatch("insert into station values ('Flagstaff', 1);");
             insertStation.addBatch("INSERT into station values ('Richmond',1);");
             insertStation.addBatch("insert into station values ('Lilydale',2);");
             insertStation.addBatch("insert into station values ('Epping',2);");
+            //安胡拉阿巴克！真主万岁！猪肉好吃！
             insertStation.executeBatch();
             connection.prepareStatement("insert into users values ('lc','Lawrence Cavedon',0,'lawrence.cavedon@rmit.edu.au','A');").execute();
             connection.prepareStatement("insert into users values ('abc','abcde',40.0,'abcdefg','C');").execute();
