@@ -60,11 +60,11 @@ public class DB {
     int travelPassID = 10000000;
     int topUpID = 10000000;
 
-    public void addTravelPassDB(String usersID, int zone, char type, char duration, Calendar date, double price) {
+    public void addTravelPassDB(String usersID, int priceType, char type, Calendar date, double price) {
         try {
             Connection addTravel = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Timestamp ts = new Timestamp(date.getTimeInMillis());
-            String statement = "insert into travelpass values ( '" + travelPassID + "','" + zone + "','" + price + "','" + duration + "','" + type + "','" + ts + "');";
+            String statement = "insert into travelpass values ( '" + travelPassID + "','" + priceType + "','" + price + "','" + type + "','" + ts + "');";
             addTravel.prepareStatement(statement).execute();
             String statement2 = "insert into history values ('" + travelPassID + "','" + usersID + "');";
             addTravel.prepareStatement(statement2).execute();
@@ -143,12 +143,27 @@ public class DB {
         try{
             Connection tpr = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Statement st = tpr.createStatement();
-            ResultSet rs = st.executeQuery("SELECT topupid FROM topuphistory WHERE userid ='"+id+"' NATURAL JOIN topup");
+            ResultSet rs = st.executeQuery("SELECT topupid FROM topuphistory WHERE userid ='"+id+"' NATURAL JOIN topup;");
             System.out.println("TopUp history is here");
             while (rs.next()){
                 System.out.println(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getString(4));
             }
             tpr.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void travelReport(String id){
+        try{
+            Connection tr = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            Statement st = tr.createStatement();
+            ResultSet rs = st.executeQuery("SELECT passid FROM history WHERE userid ='"+id+"' NATURAL JOIN travelpass;");
+            System.out.println("travelPass history is here");
+            while (rs.next()){
+                System.out.print(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+ rs.getString(4)+" "+rs.getString(5)+" "+rs.getString(6));
+            }
+            tr.close();
         }catch (Exception e){
             e.printStackTrace();
         }
