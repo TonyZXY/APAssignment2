@@ -10,21 +10,21 @@ public class MainMenuController {
     private Main main;
     @FXML
     private void changeToCustomer() throws IOException{
-        main.showCustomerMenuScene();
+        Main.showCustomerMenuScene();
     }
 
     @FXML
     private void changeToTopUp() throws IOException{
-        main.showTopUpMenuScene();
+        Main.showTopUpMenuScene();
     }
 
     @FXML
     private void changeToAdmin() throws IOException{
-        main.showAdminMenuScene();
+        Main.showAdminMenuScene();
     }
 
     @FXML
     private void goHome() throws IOException {
-        main.showMainCenter();
+        Main.showMainCenter();
     }
 }

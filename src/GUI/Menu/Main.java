@@ -35,7 +35,7 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    public void showMainCenter() throws IOException{
+    public static void showMainCenter() throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("MainCenter.fxml"));
         BorderPane mainCenter = loader.load();
@@ -61,6 +61,13 @@ public class Main extends Application {
         loader.setLocation(Main.class.getResource("/GUI/AdminMenu/AdminMenu.fxml"));
         BorderPane adminMenu = loader.load();
         mainLayout.setCenter(adminMenu);
+    }
+
+    public static void showReportMenuScene() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("/GUI/ReportMenu/ReportMenu.fxml"));
+        BorderPane reportMenu = loader.load();
+        mainLayout.setCenter(reportMenu);
     }
 
 
