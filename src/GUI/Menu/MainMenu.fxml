@@ -11,6 +11,8 @@
         <items>
           <Button mnemonicParsing="false" onAction="#goHome" text="MainMenu" />
             <Button mnemonicParsing="false" onAction="#changeToAdmin" text="Admin" />
+            <Label text="Time :" />
+            <Label fx:id="showTimer" onKeyPressed="#showTime" text="Label" />
         </items>
       </ToolBar>
    </top>

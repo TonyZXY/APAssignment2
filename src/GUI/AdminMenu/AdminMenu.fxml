@@ -17,11 +17,6 @@
                         <Font size="29.0" />
                      </font>
                   </Label>
-                  <Label layoutX="97.0" layoutY="414.0" text="Label">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
                   <Label layoutX="98.0" layoutY="164.0" text="Admin" />
                   <TextField layoutX="34.0" layoutY="285.0" promptText="Enter Password here" />
                   <Button layoutX="80.0" layoutY="330.0" mnemonicParsing="false" text="Continue" />
