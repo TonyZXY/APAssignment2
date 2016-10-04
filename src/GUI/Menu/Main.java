@@ -27,9 +27,11 @@ public class Main extends Application {
     }
 
     private void showMainMenu() throws IOException{
+//        DigitalClock digitalClock = new DigitalClock();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("MainMenu.fxml"));
         mainLayout = loader.load();
+//        mainLayout.getChildren().add(digitalClock)
         Scene scene = new Scene(mainLayout);
         primaryStage.setScene(scene);
         primaryStage.show();
