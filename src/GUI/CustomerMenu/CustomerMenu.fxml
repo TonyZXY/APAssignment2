@@ -32,33 +32,34 @@
                   <Label layoutX="266.0" layoutY="73.0" text="Pass Length" />
                   <Label layoutX="266.0" layoutY="176.0" text="Pass Type" />
                   <Label layoutX="44.0" layoutY="260.0" text="Day" />
-                  <TextField layoutX="177.0" layoutY="289.0" prefHeight="27.0" prefWidth="94.0" promptText="HHMM" />
+                  <TextField layoutX="196.0" layoutY="289.0" prefHeight="27.0" prefWidth="94.0" promptText="HHMM" />
                   <Label layoutX="196.0" layoutY="260.0" text="Time" />
                   <TextArea layoutX="212.0" layoutY="373.0" prefHeight="120.0" prefWidth="259.0" />
                   <Button layoutX="39.0" layoutY="420.0" mnemonicParsing="false" text="Add Jounary" />
                   <Button layoutX="39.0" layoutY="466.0" mnemonicParsing="false" text="Purchase Pass" />
-                  <ComboBox layoutX="39.0" layoutY="98.0" prefHeight="27.0" prefWidth="170.0" />
-                  <ComboBox layoutX="41.0" layoutY="193.0" prefHeight="27.0" prefWidth="170.0" />
+                  <ComboBox fx:id="stationFrom" layoutX="39.0" layoutY="98.0" prefHeight="27.0" prefWidth="170.0" />
+                  <ComboBox fx:id="stationTo" layoutX="41.0" layoutY="193.0" prefHeight="27.0" prefWidth="170.0" />
                   <VBox layoutX="266.0" layoutY="103.0">
                      <children>
-                        <RadioButton layoutX="266.0" layoutY="103.0" mnemonicParsing="false" text="2 Hours">
+                        <RadioButton fx:id="twoHours" layoutX="266.0" layoutY="103.0" mnemonicParsing="false" text="2 Hours">
                            <toggleGroup>
                               <ToggleGroup fx:id="PassLength" />
                            </toggleGroup>
                         </RadioButton>
-                        <RadioButton layoutX="266.0" layoutY="135.0" mnemonicParsing="false" text="One Day" toggleGroup="$PassLength" />
+                        <RadioButton fx:id="oneDay" layoutX="266.0" layoutY="135.0" mnemonicParsing="false" selected="true" text="One Day" toggleGroup="$PassLength" />
                      </children>
                   </VBox>
                   <VBox layoutX="266.0" layoutY="211.0">
                      <children>
-                        <RadioButton layoutX="266.0" layoutY="211.0" mnemonicParsing="false" text="Zone 1">
+                        <RadioButton fx:id="zoneOne" layoutX="266.0" layoutY="211.0" mnemonicParsing="false" text="Zone 1">
                            <toggleGroup>
                               <ToggleGroup fx:id="PassType" />
                            </toggleGroup>
                         </RadioButton>
-                        <RadioButton layoutX="266.0" layoutY="242.0" mnemonicParsing="false" text="Zone 1+2" toggleGroup="$PassType" />
+                        <RadioButton fx:id="zoneTwo" layoutX="266.0" layoutY="242.0" mnemonicParsing="false" selected="true" text="Zone 1+2" toggleGroup="$PassType" />
                      </children>
                   </VBox>
+                  <ChoiceBox fx:id="dayChioceBox" layoutX="44.0" layoutY="289.0" prefHeight="27.0" prefWidth="104.0" />
                </children>
             </AnchorPane>
         </items>

@@ -97,7 +97,7 @@ public class DB {
         }
     }
 
-    public double getUserBalanceDB(String userID) {
+    public static double getUserBalanceDB(String userID) {
         double balance = -1;
         try {
             Connection getBalance = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
@@ -152,6 +152,21 @@ public class DB {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    public static ArrayList getStation(){
+        ArrayList<String> stations = new ArrayList<>();
+        try{
+            Connection gs=DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            Statement st = gs.createStatement();
+            ResultSet rs = st.executeQuery("SELECT name From stations;");
+            while(rs.next()){
+                stations.add(rs.getString(1));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return stations;
     }
 
     public void travelReport(String id){
