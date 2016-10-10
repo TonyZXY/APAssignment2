@@ -19,13 +19,13 @@ import java.util.ArrayList;
  */
 public class CustomerMenuController {
 
-    ObservableList<String> dayChioceBoxList = FXCollections.observableArrayList("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday");
+    ObservableList<String> dayChioceBoxList = FXCollections.observableArrayList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
 
     ObservableList<String> stations = FXCollections.observableArrayList();
 
-    public void getStations(){
+    public void getStations() {
         ArrayList st = DB.getStation();
-        for (int i =0;i<st.size();i++){
+        for (int i = 0; i < st.size(); i++) {
             stations.add((String) st.get(i));
         }
     }
@@ -52,7 +52,7 @@ public class CustomerMenuController {
     private ComboBox stationTo;
 
     @FXML
-    private void initialize(){
+    private void initialize() {
         getStations();
 
         stationFrom.setItems(stations);
@@ -64,7 +64,7 @@ public class CustomerMenuController {
     }
 
     @FXML
-    private void showBalance(){
+    private void showBalance() {
     }
 
     @FXML

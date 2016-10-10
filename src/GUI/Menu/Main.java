@@ -15,7 +15,7 @@ public class Main extends Application {
     private static BorderPane mainLayout;
 
     @Override
-    public void start(Stage primaryStage) throws IOException{
+    public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Main Menu");
 //        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -26,7 +26,7 @@ public class Main extends Application {
         showMainCenter();
     }
 
-    private void showMainMenu() throws IOException{
+    private void showMainMenu() throws IOException {
 //        DigitalClock digitalClock = new DigitalClock();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("MainMenu.fxml"));
@@ -37,35 +37,35 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    public static void showMainCenter() throws IOException{
+    public static void showMainCenter() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("MainCenter.fxml"));
         BorderPane mainCenter = loader.load();
         mainLayout.setCenter(mainCenter);
     }
 
-    public static void showCustomerMenuScene() throws IOException{
+    public static void showCustomerMenuScene() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/GUI/CustomerMenu/CustomerMenu.fxml"));
         BorderPane CustomerMenu = loader.load();
         mainLayout.setCenter(CustomerMenu);
     }
 
-    public static void showTopUpMenuScene() throws IOException{
+    public static void showTopUpMenuScene() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/GUI/TopUpMenu/TopUpMenu.fxml"));
         BorderPane topUpMenu = loader.load();
         mainLayout.setCenter(topUpMenu);
     }
 
-    public static void showAdminMenuScene() throws IOException{
+    public static void showAdminMenuScene() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/GUI/AdminMenu/AdminMenu.fxml"));
         BorderPane adminMenu = loader.load();
         mainLayout.setCenter(adminMenu);
     }
 
-    public static void showReportMenuScene() throws IOException{
+    public static void showReportMenuScene() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("/GUI/ReportMenu/ReportMenu.fxml"));
         BorderPane reportMenu = loader.load();

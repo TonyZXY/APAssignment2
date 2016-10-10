@@ -13,7 +13,7 @@ public class AdminMenuController {
     private Main main;
 
     @FXML
-    private void changeToReportMenu() throws IOException{
+    private void changeToReportMenu() throws IOException {
         Main.showReportMenuScene();
     }
 }

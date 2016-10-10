@@ -26,17 +26,17 @@ public class TopUpMenuConrtoller {
     private Label balanceLabel;
 
     @FXML
-    private double checkUsersBalance(){
+    private double checkUsersBalance() {
         double getBalance = Fileio.DB.getUserBalanceDB(id);
         return getBalance;
     }
 
     @FXML
-    private void showBalance(){
+    private void showBalance() {
         balance = checkUsersBalance();
-        if(balance ==-1){
+        if (balance == -1) {
             balanceLabel.setText("User Not found!");
-        }else {
+        } else {
             balanceLabel.setText("$" + balance);
             cridit = balance;
         }

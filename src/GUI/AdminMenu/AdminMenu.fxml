@@ -6,53 +6,57 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AdminMenu.AdminMenuController">
-   <center>
-      <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <Label layoutX="29.0" layoutY="81.0" text="MyTi System">
-                     <font>
-                        <Font size="29.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="98.0" layoutY="164.0" text="Admin" />
-                  <TextField layoutX="34.0" layoutY="285.0" promptText="Enter Password here" />
-                  <Button layoutX="80.0" layoutY="330.0" mnemonicParsing="false" text="Continue" />
-                  <TextField layoutX="34.0" layoutY="247.0" promptText="Enter ID here" />
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <Label layoutX="47.0" layoutY="50.0" text="Create New User" />
-                  <Label layoutX="318.0" layoutY="50.0" text="Update Price" />
-                  <Label layoutX="30.0" layoutY="100.0" text="ID :" />
-                  <Label layoutX="30.0" layoutY="141.0" text="Name :" />
-                  <Label layoutX="30.0" layoutY="181.0" text="Email :" />
-                  <Label layoutX="30.0" layoutY="258.0" text="Open Balance :" />
-                  <TextField layoutX="100.0" layoutY="95.0" prefHeight="27.0" prefWidth="130.0" />
-                  <TextField layoutX="100.0" layoutY="136.0" prefHeight="27.0" prefWidth="130.0" />
-                  <TextField layoutX="30.0" layoutY="209.0" prefHeight="27.0" prefWidth="198.0" />
-                  <TextField layoutX="152.0" layoutY="253.0" prefHeight="27.0" prefWidth="78.0" />
-                  <Button layoutX="30.0" layoutY="320.0" mnemonicParsing="false" text="Create User" />
-                  <Button layoutX="162.0" layoutY="320.0" mnemonicParsing="false" text="Cancel" />
-                  <Label layoutX="35.0" layoutY="373.0" text="Log" />
-                  <Label layoutX="301.0" layoutY="100.0" text="Z1 2H" />
-                  <Label layoutX="301.0" layoutY="140.0" text="Z1 1D" />
-                  <Label layoutX="301.0" layoutY="180.0" text="Z2 2H" />
-                  <Label layoutX="301.0" layoutY="220.0" text="Z2 1D" />
-                  <TextField layoutX="376.0" layoutY="95.0" prefHeight="27.0" prefWidth="99.0" />
-                  <TextField layoutX="376.0" layoutY="135.0" prefHeight="27.0" prefWidth="99.0" />
-                  <TextField layoutX="376.0" layoutY="175.0" prefHeight="27.0" prefWidth="99.0" />
-                  <TextField layoutX="376.0" layoutY="215.0" prefHeight="27.0" prefWidth="99.0" />
-                  <Button layoutX="300.0" layoutY="275.0" mnemonicParsing="false" text="Update" />
-                  <Button layoutX="398.0" layoutY="275.0" mnemonicParsing="false" text="Cancel" />
-                  <TextArea layoutX="30.0" layoutY="415.0" prefHeight="120.0" prefWidth="451.0" />
-                  <Button layoutX="309.0" layoutY="345.0" mnemonicParsing="false" onAction="#changeToReportMenu" text="Generate Report" />
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
-   </center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0"
+            prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="GUI.AdminMenu.AdminMenuController">
+    <center>
+        <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0"
+                   BorderPane.alignment="CENTER">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Label layoutX="29.0" layoutY="81.0" text="MyTi System">
+                            <font>
+                                <Font size="29.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="98.0" layoutY="164.0" text="Admin"/>
+                        <TextField layoutX="34.0" layoutY="285.0" promptText="Enter Password here"/>
+                        <Button layoutX="80.0" layoutY="330.0" mnemonicParsing="false" text="Continue"/>
+                        <TextField layoutX="34.0" layoutY="247.0" promptText="Enter ID here"/>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Label layoutX="47.0" layoutY="50.0" text="Create New User"/>
+                        <Label layoutX="318.0" layoutY="50.0" text="Update Price"/>
+                        <Label layoutX="30.0" layoutY="100.0" text="ID :"/>
+                        <Label layoutX="30.0" layoutY="141.0" text="Name :"/>
+                        <Label layoutX="30.0" layoutY="181.0" text="Email :"/>
+                        <Label layoutX="30.0" layoutY="258.0" text="Open Balance :"/>
+                        <TextField layoutX="100.0" layoutY="95.0" prefHeight="27.0" prefWidth="130.0"/>
+                        <TextField layoutX="100.0" layoutY="136.0" prefHeight="27.0" prefWidth="130.0"/>
+                        <TextField layoutX="30.0" layoutY="209.0" prefHeight="27.0" prefWidth="198.0"/>
+                        <TextField layoutX="152.0" layoutY="253.0" prefHeight="27.0" prefWidth="78.0"/>
+                        <Button layoutX="30.0" layoutY="320.0" mnemonicParsing="false" text="Create User"/>
+                        <Button layoutX="162.0" layoutY="320.0" mnemonicParsing="false" text="Cancel"/>
+                        <Label layoutX="35.0" layoutY="373.0" text="Log"/>
+                        <Label layoutX="301.0" layoutY="100.0" text="Z1 2H"/>
+                        <Label layoutX="301.0" layoutY="140.0" text="Z1 1D"/>
+                        <Label layoutX="301.0" layoutY="180.0" text="Z2 2H"/>
+                        <Label layoutX="301.0" layoutY="220.0" text="Z2 1D"/>
+                        <TextField layoutX="376.0" layoutY="95.0" prefHeight="27.0" prefWidth="99.0"/>
+                        <TextField layoutX="376.0" layoutY="135.0" prefHeight="27.0" prefWidth="99.0"/>
+                        <TextField layoutX="376.0" layoutY="175.0" prefHeight="27.0" prefWidth="99.0"/>
+                        <TextField layoutX="376.0" layoutY="215.0" prefHeight="27.0" prefWidth="99.0"/>
+                        <Button layoutX="300.0" layoutY="275.0" mnemonicParsing="false" text="Update"/>
+                        <Button layoutX="398.0" layoutY="275.0" mnemonicParsing="false" text="Cancel"/>
+                        <TextArea layoutX="30.0" layoutY="415.0" prefHeight="120.0" prefWidth="451.0"/>
+                        <Button layoutX="309.0" layoutY="345.0" mnemonicParsing="false" onAction="#changeToReportMenu"
+                                text="Generate Report"/>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </center>
 </BorderPane>

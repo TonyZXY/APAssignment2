@@ -5,6 +5,7 @@ import MyTi.TopUpHistory.TopUpHistory;
 import java.util.*;
 
 import MyTi.Station.*;
+
 /**
  * Project APAssignment2
  * Created by TonyZheng on 24/9/16.
@@ -51,7 +52,7 @@ public class UsersData {
 
     static boolean checkUser(String id) {
         boolean valid = false;
-        if(users.containsKey(id)){
+        if (users.containsKey(id)) {
             valid = true;
         }
         return valid;
@@ -59,7 +60,7 @@ public class UsersData {
 
     static boolean checkStation(String stationName) {
         boolean valid = false;
-        if(station.containsKey(stationName)){
+        if (station.containsKey(stationName)) {
             valid = true;
         }
         return valid;
@@ -106,16 +107,19 @@ public class UsersData {
     static double getRate(String ID) { //here is rate setting
         double rate = 1;
         char type = users.get(ID).getType();
-        Calendar date=Calendar.getInstance();
+        Calendar date = Calendar.getInstance();
         if (type == 'A') {
             rate = Arate;
-        }if (type == 'C') {
+        }
+        if (type == 'C') {
             rate = Jrate;
-        }if (type == 'S') {
+        }
+        if (type == 'S') {
             rate = Srate;
 //        }if(type =='C'&&date.get(Calendar.DAY_OF_WEEK)==Calendar.SUNDAY){
 //            rate = 0.0;
-        }if(type =='S'&&date.get(Calendar.DAY_OF_WEEK)==Calendar.SUNDAY){
+        }
+        if (type == 'S' && date.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
             rate = SSrate;
         }
         return rate;

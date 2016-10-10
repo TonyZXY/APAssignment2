@@ -14,18 +14,19 @@ public class MainMenuController {
     private Label showTimer;
 
     private Main main;
+
     @FXML
-    private void changeToCustomer() throws IOException{
+    private void changeToCustomer() throws IOException {
         Main.showCustomerMenuScene();
     }
 
     @FXML
-    private void changeToTopUp() throws IOException{
+    private void changeToTopUp() throws IOException {
         Main.showTopUpMenuScene();
     }
 
     @FXML
-    private void changeToAdmin() throws IOException{
+    private void changeToAdmin() throws IOException {
         Main.showAdminMenuScene();
     }
 
@@ -35,7 +36,7 @@ public class MainMenuController {
     }
 
     @FXML
-    private void showTime() throws Exception{
+    private void showTime() throws Exception {
         Calendar time = Calendar.getInstance();
         String hourString = pad(2, ' ', time.get(Calendar.HOUR) == 0 ? "12" : time.get(Calendar.HOUR) + "");
         String minuteString = pad(2, '0', time.get(Calendar.MINUTE) + "");

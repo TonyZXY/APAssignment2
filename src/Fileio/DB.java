@@ -139,47 +139,47 @@ public class DB {
         }
     }
 
-    public void topUpReport(String id){
-        try{
+    public void topUpReport(String id) {
+        try {
             Connection tpr = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Statement st = tpr.createStatement();
-            ResultSet rs = st.executeQuery("SELECT topupid FROM topuphistory WHERE userid ='"+id+"' NATURAL JOIN topup;");
+            ResultSet rs = st.executeQuery("SELECT topupid FROM topuphistory WHERE userid ='" + id + "' NATURAL JOIN topup;");
             System.out.println("TopUp history is here");
-            while (rs.next()){
-                System.out.println(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getString(4));
+            while (rs.next()) {
+                System.out.println(rs.getString(1) + " " + rs.getString(2) + " " + rs.getString(3) + " " + rs.getString(4));
             }
             tpr.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static ArrayList getStation(){
+    public static ArrayList getStation() {
         ArrayList<String> stations = new ArrayList<>();
-        try{
-            Connection gs=DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+        try {
+            Connection gs = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Statement st = gs.createStatement();
             ResultSet rs = st.executeQuery("SELECT name From stations;");
-            while(rs.next()){
+            while (rs.next()) {
                 stations.add(rs.getString(1));
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return stations;
     }
 
-    public void travelReport(String id){
-        try{
+    public void travelReport(String id) {
+        try {
             Connection tr = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Statement st = tr.createStatement();
-            ResultSet rs = st.executeQuery("SELECT passid FROM history WHERE userid ='"+id+"' NATURAL JOIN travelpass;");
+            ResultSet rs = st.executeQuery("SELECT passid FROM history WHERE userid ='" + id + "' NATURAL JOIN travelpass;");
             System.out.println("travelPass history is here");
-            while (rs.next()){
-                System.out.print(rs.getString(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+ rs.getString(4)+" "+rs.getString(5)+" "+rs.getString(6));
+            while (rs.next()) {
+                System.out.print(rs.getString(1) + " " + rs.getString(2) + " " + rs.getString(3) + " " + rs.getString(4) + " " + rs.getString(5) + " " + rs.getString(6));
             }
             tr.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

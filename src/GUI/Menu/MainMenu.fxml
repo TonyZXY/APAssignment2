@@ -5,15 +5,17 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Menu.MainMenuController">
-   <top>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <items>
-          <Button mnemonicParsing="false" onAction="#goHome" text="MainMenu" />
-            <Button mnemonicParsing="false" onAction="#changeToAdmin" text="Admin" />
-            <Label text="Time :" />
-            <Label fx:id="showTimer" onKeyPressed="#showTime" text="Label" />
-        </items>
-      </ToolBar>
-   </top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="GUI.Menu.MainMenuController">
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Button mnemonicParsing="false" onAction="#goHome" text="MainMenu"/>
+                <Button mnemonicParsing="false" onAction="#changeToAdmin" text="Admin"/>
+                <Label text="Time :"/>
+                <Label fx:id="showTimer" onKeyPressed="#showTime" text="Label"/>
+            </items>
+        </ToolBar>
+    </top>
 </BorderPane>

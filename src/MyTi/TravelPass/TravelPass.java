@@ -1,6 +1,7 @@
 package MyTi.TravelPass;
 
 import java.util.Calendar;
+
 /**
  * Project APAssignment2
  * Created by TonyZheng on 24/9/16.
@@ -37,22 +38,22 @@ public class TravelPass {
     private String endName;
     private char type;
 
-    public TravelPass(Calendar calendar, int ticketType, String startName, String endName, char type,double price) {
+    public TravelPass(Calendar calendar, int ticketType, String startName, String endName, char type, double price) {
         this.startName = startName;
         this.endName = endName;
         this.type = type;
 //        this.date = date;
         this.calendar = calendar;
         this.ticketType = ticketType;
-        this.price=price;
+        this.price = price;
     }
 
-    public TravelPass(Calendar calendar, int ticketType, String startName, char type,double price) {
+    public TravelPass(Calendar calendar, int ticketType, String startName, char type, double price) {
         this.startName = startName;
         this.ticketType = ticketType;
         this.type = type;
         this.calendar = calendar;
-        this.price=price;
+        this.price = price;
     }
 
 
