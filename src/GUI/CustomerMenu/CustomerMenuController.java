@@ -5,10 +5,7 @@ import GUI.Menu.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,7 +28,15 @@ public class CustomerMenuController {
     }
 
     @FXML
-    private Label balance;
+    private Label balanceLabel;
+
+    private double balance;
+    private double cridit;
+
+    @FXML
+    private TextField IDField;
+    private String ID;
+
 
     @FXML
     private ChoiceBox dayChioceBox;
@@ -52,6 +57,30 @@ public class CustomerMenuController {
     private ComboBox stationTo;
 
     @FXML
+    private void IDFieldEvent() {
+        ID = IDField.getText();
+    }
+
+    @FXML
+    private void cuntinue() {
+        IDFieldEvent();
+        balance = Fileio.DB.getUserBalanceDB(ID);
+        showBalance();
+    }
+
+    @FXML
+    private void showBalance() {
+        if (balance == -1) {
+            balanceLabel.setText("User Not found!");
+        } else {
+            balanceLabel.setText("$" + balance);
+            cridit = balance;
+        }
+    }
+
+
+
+    @FXML
     private void initialize() {
         getStations();
 
@@ -63,9 +92,6 @@ public class CustomerMenuController {
         dayChioceBox.setItems(dayChioceBoxList);
     }
 
-    @FXML
-    private void showBalance() {
-    }
 
     @FXML
     private void changeToTopUp() throws IOException {
