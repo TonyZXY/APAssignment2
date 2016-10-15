@@ -2,6 +2,7 @@ package GUI.CustomerMenu;
 
 import Fileio.DB;
 import GUI.Menu.Main;
+import MyTi.MyTiSystem;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,6 +10,7 @@ import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * Project APAssignment2
@@ -31,7 +33,6 @@ public class CustomerMenuController {
     private Label balanceLabel;
 
     private double balance;
-    private double cridit;
 
     @FXML
     private TextField IDField;
@@ -74,11 +75,43 @@ public class CustomerMenuController {
             balanceLabel.setText("User Not found!");
         } else {
             balanceLabel.setText("$" + balance);
-            cridit = balance;
         }
     }
 
+    @FXML
+    private int ticketType() {
+        int type;
+        if (twoHours.isSelected() && zoneOne.isSelected()) {
+            type = 1;
+        } else if (twoHours.isSelected() && zoneTwo.isSelected()) {
+            type = 3;
+        } else if (oneDay.isSelected() && zoneOne.isSelected()) {
+            type = 2;
+        } else {
+            type = 4;
+        }
+        return type;
+    }
 
+    @FXML
+    private void purchaseTravelPass() {
+        int priceType = ticketType();
+        Fileio.DB.purchaseTravelPass(ID,priceType);
+//        double amount = MyTiSystem.getPrice(priceType);
+//        Calendar date = Calendar.getInstance();
+//        char type = Fileio.DB.getUserTypeDB(ID);
+//        Fileio.DB.purchase(ID, amount);
+//        Fileio.DB.addTravelPassDB(ID, priceType, type, date, amount);
+    }
+
+    @FXML
+    private void useTravelPass(){
+        String from = stationFrom.getValue().toString();
+        String to = stationTo.getValue().toString();
+        int fromZone = Fileio.DB.getStationZone(from);
+        int toZone = Fileio.DB.getStationZone(to);
+
+    }
 
     @FXML
     private void initialize() {

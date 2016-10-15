@@ -4,7 +4,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.sql.Timestamp;
+import java.util.ResourceBundle;
 
+import MyTi.MyTiSystem;
 import org.hsqldb.Server;
 
 /**
@@ -32,12 +34,14 @@ public class DB {
             connection.prepareStatement("DROP table history if EXISTS ;").execute();
             connection.prepareStatement("DROP table topup if EXISTS ;").execute();
             connection.prepareStatement("DROP table topuphistory if EXISTS ;").execute();
+            connection.prepareStatement("DROP TABLE travelpasshistory if EXISTS ;").execute();
             connection.prepareStatement("CREATE table station (name VARCHAR (20), zone INTEGER );").execute();
             connection.prepareStatement("CREATE TABLE users (userID VARCHAR (20), userName VARCHAR (40),balance FLOAT , email VARCHAR (50),tickettype CHAR,PRIMARY key (userID));").execute();
             connection.prepareStatement("CREATE TABLE travelpass(passid VARCHAR (20),pricetype INTEGER ,price FLOAT ,tickettype char,time TIMESTAMP ,PRIMARY key (passid));").execute();
             connection.prepareStatement("CREATE TABLE history(passid VARCHAR (20),userid VARCHAR (20),PRIMARY key (passid,userid),FOREIGN KEY (passid) REFERENCES travelpass(passid),FOREIGN KEY (userid) REFERENCES users(userid));").execute();
             connection.prepareStatement("CREATE TABLE topup(topupid VARCHAR (20),balance FLOAT ,topuptime TIMESTAMP ,PRIMARY key(topupid));").execute();
             connection.prepareStatement("CREATE TABLE topuphistory(userid VARCHAR (20),topupid VARCHAR (20),PRIMARY KEY (userid,topupid),FOREIGN key(userid) REFERENCES users(userid),FOREIGN KEY (topupid) REFERENCES topup(topupid));").execute();
+            connection.prepareStatement("CREATE TABLE travelpasshistory(passid VARCHAR (20),stationfrom VARCHAR (20),stationto VARCHAR(20),traveltime TIMESTAMP,primary KEY (passid),FOREIGN KEY (passid) REFERENCES travelpass(passid));").execute();
             Statement insertStation = connection.createStatement();
             insertStation.addBatch("insert into station values ('Central', 1);");
             //我是全世界最美最可爱的优娜娜，我是来捣乱的，我也不知道我写的是什么j8玩意儿，棒棒。
@@ -57,10 +61,10 @@ public class DB {
         }
     }
 
-    int travelPassID = 10000000;
-    int topUpID = 10000000;
+    static int travelPassID = 10000000;
+    static int topUpID = 10000000;
 
-    public void addTravelPassDB(String usersID, int priceType, char type, Calendar date, double price) {
+    public static void addTravelPassDB(String usersID, int priceType, char type, Calendar date, double price) {
         try {
             Connection addTravel = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Timestamp ts = new Timestamp(date.getTimeInMillis());
@@ -112,6 +116,23 @@ public class DB {
             balance = -1;
         }
         return balance;
+    }
+
+    public static char getUserTypeDB(String userID){
+        char type = 'A';
+        try{
+            Connection getType = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            String statement = "Select type from users where userid = '"+userID+"';";
+            ResultSet typeGetter = getType.createStatement().executeQuery(statement);
+            while (typeGetter.next()){
+                type = typeGetter.getString(1).charAt(0);
+            }
+            getType.close();
+        }catch (Exception e){
+            e.printStackTrace();
+            type = 'A';
+        }
+        return type;
     }
 
     public void topUp(String id, double amount) {
@@ -169,7 +190,22 @@ public class DB {
         return stations;
     }
 
-    public void travelReport(String id) {
+    public static int getStationZone(String station) {
+        int zone = 0;
+        try {
+            Connection gsz = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            Statement st = gsz.createStatement();
+            ResultSet rs = st.executeQuery("Select zone FROM stations WHERE name = '" + station + "';");
+            while (rs.next()) {
+                zone = rs.getInt(1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return zone;
+    }
+
+    public static void travelReport(String id) {
         try {
             Connection tr = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Statement st = tr.createStatement();
@@ -184,10 +220,92 @@ public class DB {
         }
     }
 
+    public static ArrayList allTravelReport(){
+        ArrayList<String> report = new ArrayList<>();
+        try{
+            Connection tr = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            Statement st = tr.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM history NATIONAL JOIN travelpass;");
+            while (rs.next()){
+                report.add(rs.getString(1));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return report;
+    }
+
+    public static void purchase(String ID, double amount) {
+        double balance = 0;
+        try {
+            Connection purchase = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            Statement st = purchase.createStatement();
+            ResultSet rs = st.executeQuery("select balance from users where userid = '" + ID + "';");
+            while (rs.next()) {
+                balance = rs.getDouble(1);
+            }
+            double addBalance = balance - amount;
+            String statement1 = "UPDATE users SET balance=" + "'" + addBalance + "'" + " where userid =" + "'" + ID + "';";
+            st.executeUpdate(statement1);
+            purchase.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void getRecentTravelPass(String id){
+        ArrayList<String> travelPass = new ArrayList<>();
+        try{
+            Connection travelPassGetter = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            Statement st = travelPassGetter.createStatement();
+            ResultSet rs = st.executeQuery("Select passid FROM history where userid = '"+id+"'and (SELECT max(passid) where history) natural JOIN travelpass;");
+            while(rs.next()){
+                travelPass.add(rs.getString(1));
+                travelPass.add(rs.getString(2));
+                travelPass.add(rs.getString(3));
+            }
+            travelPassGetter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 
     public boolean checkValidTicket(String userID) {
         boolean valid = false;
         return valid;
+    }
+
+    private static ArrayList getStationReportDB(Calendar date){
+        ArrayList<String> stationReport = new ArrayList<>();
+        try{
+            Connection stationPassGetter = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            Statement st = stationPassGetter.createStatement();
+            String statment = "SELECT ";
+            ResultSet rs = st.executeQuery(statment);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return stationReport;
+    }
+
+    public static ArrayList generateStationReport(){
+        Calendar date = Calendar.getInstance();
+        ArrayList<String> station = getStationReportDB(date);
+        ArrayList<String> report = new ArrayList<>();
+
+
+        return report;
+    }
+
+    
+
+    public static void purchaseTravelPass(String ID,int ticketType){
+        double amount = MyTiSystem.getPrice(ticketType);
+        Calendar date = Calendar.getInstance();
+        char type = getUserTypeDB(ID);
+        purchase(ID,amount);
+        addTravelPassDB(ID,ticketType,type,date,amount);
     }
 
 //    public ArrayList selectTicketHistory(String userID){

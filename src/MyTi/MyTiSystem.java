@@ -28,10 +28,10 @@ public class MyTiSystem {
         this.zoneTwoTwoHoursPassPrice = zoneTwoTwoHoursPassPrice;
     }
 
-    private double zoneOneOneDayPassPrice = 6.9;
-    private double zoneOneTwoHoursPassPrice = 3.5;
-    private double zoneTwoOneDayPassPrice = 9.8;
-    private double zoneTwoTwoHoursPassPrice = 5.0;
+    private static double zoneOneOneDayPassPrice = 6.9;
+    private static double zoneOneTwoHoursPassPrice = 3.5;
+    private static double zoneTwoOneDayPassPrice = 9.8;
+    private static double zoneTwoTwoHoursPassPrice = 5.0;
 
     private void mainMenu() { //main menu
         System.out.println("Welcome to MyTi");
@@ -1479,6 +1479,19 @@ public class MyTiSystem {
             valid = 3;
         }
         return valid;
+    }
+
+    public static double getPrice(int type){
+        if(type ==1) {
+            return zoneOneTwoHoursPassPrice;
+        }
+        else if(type ==2){
+            return zoneOneOneDayPassPrice;
+        }else if(type ==3){
+            return zoneTwoTwoHoursPassPrice;
+        }else {
+            return zoneTwoOneDayPassPrice;
+        }
     }
 
 
