@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 import java.util.ResourceBundle;
 
 import MyTi.MyTiSystem;
+import MyTi.TravelPass.TravelPass;
 import org.hsqldb.Server;
 
 /**
@@ -80,6 +81,19 @@ public class DB {
         }
     }
 
+    public static void addTravelPassHistoryDB(String passid,String stationFrom,String stationTo){
+        Timestamp ts = new Timestamp(Calendar.getInstance().getTimeInMillis());
+        try{
+            Connection APH = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            String statement = "insert into travelpasshistory values('"+historyid+"','"+passid+"','"+stationFrom+"','"+stationTo+"','"+ts+"');";
+            APH.prepareStatement(statement).execute();
+            historyid++;
+            APH.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     public void addNewUserDB(String userID, String userName, double balance, String email, char type) {
         try {
             Connection addUser = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
@@ -100,6 +114,22 @@ public class DB {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static String getPassid(String id){
+        String passid = null;
+        try{
+            Connection getpassid = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            Statement st = getpassid.createStatement();
+            ResultSet rs = st.executeQuery("SELECT max(passid) from history where userid ='"+id+"';");
+            while (rs.next()){
+                passid = rs.getString(1);
+            }
+            getpassid.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return passid;
     }
 
     public static double getUserBalanceDB(String userID) {
@@ -136,7 +166,7 @@ public class DB {
         return type;
     }
 
-    public void topUp(String id, double amount) {
+    public static void topUp(String id, double amount) {
         double balance = 0;
         try {
             Connection topUp = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
@@ -174,6 +204,31 @@ public class DB {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static TravelPass getTravelPass(String id){
+        TravelPass pass = null;
+        try{
+            double price = 0;
+            int type = 0;
+            Timestamp time = null;
+            char pricetype = 0;
+            Calendar date = Calendar.getInstance();
+            Connection tpg = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
+            Statement st = tpg.createStatement();
+            ResultSet rs = st.executeQuery("Select travelpass.price,travelpass.tickettype,travelpass.time,travelpass.pricetype FROM history,travelpass WHERE userid='"+id+"' and select max(passid);");
+            while (rs.next()){
+                price = rs.getDouble(1);
+                type = rs.getInt(2);
+                time = rs.getTimestamp(3);
+                pricetype = rs.getString(4).charAt(0);
+                date.setTimeInMillis(time.getTime());
+            }
+            pass=new TravelPass(date,type,null,pricetype,price);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return pass;
     }
 
     public static ArrayList getStation() {

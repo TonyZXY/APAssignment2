@@ -6,44 +6,40 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0"
-            prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="GUI.TopUpMenu.TopUpMenuConrtoller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TopUpMenu.TopUpMenuConrtoller">
     <center>
-        <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0"
-                   BorderPane.alignment="CENTER">
+        <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
                         <Label layoutX="29.0" layoutY="81.0" text="MyTi System">
                             <font>
-                                <Font size="29.0"/>
+                                <Font size="29.0" />
                             </font>
                         </Label>
                         <Label layoutX="97.0" layoutY="414.0" text="Label">
                             <font>
-                                <Font size="16.0"/>
+                                <Font size="16.0" />
                             </font>
                         </Label>
-                        <Label layoutX="96.0" layoutY="154.0" text="TopUp"/>
-                        <TextField fx:id="IDField" layoutX="34.0" layoutY="285.0" promptText="Enter ID here"/>
-                        <Button layoutX="80.0" layoutY="330.0" mnemonicParsing="false" onAction="#showBalance"
-                                text="Continue"/>
+                        <Label layoutX="96.0" layoutY="154.0" text="TopUp" />
+                        <TextField fx:id="IDField" layoutX="34.0" layoutY="285.0" promptText="Enter ID here" />
+                        <Button layoutX="80.0" layoutY="330.0" mnemonicParsing="false" onAction="#showBalance" text="Continue" />
                     </children>
                 </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                     <children>
-                        <Label layoutX="57.0" layoutY="56.0" text="Current Balance :"/>
-                        <Label fx:id="balanceLabel" layoutX="261.0" layoutY="56.0" text="Label"/>
-                        <Label layoutX="57.0" layoutY="127.0" text="TopUp :"/>
-                        <TextField fx:id="amountField" layoutX="57.0" layoutY="182.0" promptText="Multiples of $5.00"/>
-                        <Button layoutX="57.0" layoutY="271.0" mnemonicParsing="false" text="Confirm"/>
-                        <Button layoutX="164.0" layoutY="271.0" mnemonicParsing="false" text="Cancel"/>
-                        <Label layoutX="311.0" layoutY="127.0" text="Note :"/>
-                        <Label layoutX="278.0" layoutY="174.0" text="One ID can hold less than $100 cridit"/>
-                        <Label layoutX="278.0" layoutY="209.0" text="Top Up balance need to be "/>
-                        <Label layoutX="278.0" layoutY="233.0" text="in precise multiples of $5.00."/>
-                        <TextArea layoutX="52.0" layoutY="403.0" prefHeight="91.0" prefWidth="405.0"/>
+                        <Label layoutX="57.0" layoutY="56.0" text="Current Balance :" />
+                        <Label fx:id="balanceLabel" layoutX="261.0" layoutY="56.0" text="Label" />
+                        <Label layoutX="57.0" layoutY="127.0" text="TopUp :" />
+                        <TextField fx:id="amountField" layoutX="57.0" layoutY="182.0" promptText="Multiples of $5.00" />
+                        <Button layoutX="57.0" layoutY="271.0" mnemonicParsing="false" onAction="#topUP" text="Confirm" />
+                        <Button layoutX="164.0" layoutY="271.0" mnemonicParsing="false" text="Cancel" />
+                        <Label layoutX="311.0" layoutY="127.0" text="Note :" />
+                        <Label layoutX="278.0" layoutY="174.0" text="One ID can hold less than $100 cridit" />
+                        <Label layoutX="278.0" layoutY="209.0" text="Top Up balance need to be " />
+                        <Label layoutX="278.0" layoutY="233.0" text="in precise multiples of $5.00." />
+                        <TextArea layoutX="52.0" layoutY="403.0" prefHeight="91.0" prefWidth="405.0" />
                     </children>
                 </AnchorPane>
             </items>

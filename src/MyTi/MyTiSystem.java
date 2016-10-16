@@ -486,7 +486,7 @@ public class MyTiSystem {
         }
     }
 
-    private static void addStationNameDB(){
+    private static void addStationNameDB() {
         ArrayList<String> station = Fileio.DB.getStation();
         for (String stationName : station) {
             stationStartStatistics.put(stationName, 0);
@@ -494,30 +494,30 @@ public class MyTiSystem {
         }
     }
 
-    private static void addStationStartDB(){
+    private static void addStationStartDB() {
         ArrayList<String> station = Fileio.DB.getStationStartReportDB();
-        for(String aStation:station){
-            stationStartStatistics.put(aStation,stationStartStatistics.get(aStation)+1);
+        for (String aStation : station) {
+            stationStartStatistics.put(aStation, stationStartStatistics.get(aStation) + 1);
         }
     }
 
-    private static void addStationEndDB(){
+    private static void addStationEndDB() {
         ArrayList<String> station = Fileio.DB.getStationTOReportDB();
-        for(String aStation:station){
-            stationEndStatistics.put(aStation,stationEndStatistics.get(aStation)+1);
+        for (String aStation : station) {
+            stationEndStatistics.put(aStation, stationEndStatistics.get(aStation) + 1);
         }
     }
 
-    public static ArrayList generateStationsStatistics(){
+    public static ArrayList generateStationsStatistics() {
         addStationNameDB();
         addStationEndDB();
         addStationStartDB();
         ArrayList<String> station = Fileio.DB.getStation();
         ArrayList<String> report = new ArrayList<>();
-        for(String aStation:station){
+        for (String aStation : station) {
             int start = stationStartStatistics.get(aStation);
             int end = stationEndStatistics.get(aStation);
-            report.add(aStation + ": "+start+" journeys start and "+ end+ " journey end here");
+            report.add(aStation + ": " + start + " journeys start and " + end + " journey end here");
         }
         return report;
     }
@@ -1306,6 +1306,84 @@ public class MyTiSystem {
         return valid;
     }
 
+    public static int checkValidTicketDB(String id, int fromZone, int endZone) {
+        int status;
+        TravelPass pass = Fileio.DB.getTravelPass(id);
+        int timeValid = checkTicketTimeDB(pass);
+        boolean zoneValid = checkZoneValidDB(pass, fromZone, endZone);
+        if (!zoneValid) {
+            status = 1;
+        } else if (timeValid == 3) {
+            status = 2;
+        } else if (timeValid == 2) {
+            status = 3;
+        } else {
+            status = 4;
+        }
+        return status;
+    }
+
+    private static int checkTicketTimeDB(TravelPass pass) {
+        int valid = 3;
+        try {
+            Calendar now = Calendar.getInstance();
+            Calendar ticketTime = pass.getCalendar();
+            int ticketType = pass.getTicketType();
+            int nowDate = now.get(Calendar.DAY_OF_YEAR);
+            int ticketDate = ticketTime.get(Calendar.DAY_OF_YEAR);
+            long nowSecend = now.getTimeInMillis();
+            long ticketSecend = ticketTime.getTimeInMillis();
+            if ((nowDate == ticketDate && nowSecend - ticketSecend <= 7200000) || (nowDate == ticketDate && ticketType == 2) || (nowDate == ticketDate && ticketType == 4)) {
+                //valid;
+                valid = 1;
+            } else if (nowDate == ticketDate && nowSecend - ticketSecend > 7200000) {
+                //buy a one day pass;
+                valid = 2;
+            } else if (nowDate != ticketDate) {
+                //buy a new pass;
+                valid = 3;
+            }
+        } catch (Exception e) {
+            valid = 3;
+        }
+        return valid;
+    }
+
+    private static boolean checkZoneValidDB(TravelPass pass, int startZone, int endZone) {
+        boolean valid = false;
+        try {
+            int ticketType = pass.getTicketType();
+            int thisZone = max(startZone, endZone);
+            if (ticketType == 1 && thisZone == 2) {
+                valid = false;
+            }
+            if (ticketType == 1 && thisZone == 1) {
+                valid = true;
+            }
+            if (ticketType == 2 && thisZone == 2) {
+                valid = false;
+            }
+            if (ticketType == 2 && thisZone == 1) {
+                valid = true;
+            }
+            if (ticketType == 3 && thisZone == 2) {
+                valid = true;
+            }
+            if (ticketType == 3 && thisZone == 1) {
+                valid = true;
+            }
+            if (ticketType == 4 && thisZone == 2) {
+                valid = true;
+            }
+            if (ticketType == 4 && thisZone == 1) {
+                valid = true;
+            }
+        } catch (Exception e) {
+            valid = false;
+        }
+        return valid;
+    }
+
     private boolean checkZoneValid(String id) {
         boolean valid = false;
         try {
@@ -1347,7 +1425,7 @@ public class MyTiSystem {
         return valid;
     }
 
-    private int max(int startZone, int destinationZone) {
+    private static int max(int startZone, int destinationZone) {
         int max = 1;
         if (startZone > destinationZone) {
             max = startZone;
@@ -1517,15 +1595,14 @@ public class MyTiSystem {
         return valid;
     }
 
-    public static double getPrice(int type){
-        if(type ==1) {
+    public static double getPrice(int type) {
+        if (type == 1) {
             return zoneOneTwoHoursPassPrice;
-        }
-        else if(type ==2){
+        } else if (type == 2) {
             return zoneOneOneDayPassPrice;
-        }else if(type ==3){
+        } else if (type == 3) {
             return zoneTwoTwoHoursPassPrice;
-        }else {
+        } else {
             return zoneTwoOneDayPassPrice;
         }
     }

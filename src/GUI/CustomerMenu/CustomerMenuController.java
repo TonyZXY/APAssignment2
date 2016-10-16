@@ -35,6 +35,9 @@ public class CustomerMenuController {
     private double balance;
 
     @FXML
+    private TextArea area;
+
+    @FXML
     private TextField IDField;
     private String ID;
 
@@ -108,9 +111,24 @@ public class CustomerMenuController {
     private void useTravelPass(){
         String from = stationFrom.getValue().toString();
         String to = stationTo.getValue().toString();
+//        int valid = Fileio.DB.
         int fromZone = Fileio.DB.getStationZone(from);
-        int toZone = Fileio.DB.getStationZone(to);
-
+        int endZone = Fileio.DB.getStationZone(to);
+        int status = MyTiSystem.checkValidTicketDB(ID,fromZone,endZone);
+        String passid = Fileio.DB.getPassid(ID);
+        if(status==1){
+            area.appendText("You don't have valid ticket.");
+            area.appendText("Ticket Zone not fit");
+        }else if(status ==2){
+            area.appendText("You don't have valid ticket.");
+            area.appendText("Ticket Date not fit");
+        }else if(status ==3){
+            area.appendText("You don't have valid ticket.");
+            area.appendText("You need Purchase new Travel Pass");
+        }else {
+            area.appendText("Ticket Valid");
+            Fileio.DB.addTravelPassHistoryDB(passid,from,to);
+        }
     }
 
     @FXML
