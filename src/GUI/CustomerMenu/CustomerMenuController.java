@@ -201,5 +201,5 @@ public class CustomerMenuController {
     @FXML
     private void changeToTopUp() throws IOException {
         Main.showTopUpMenuScene();
-    }//我是宝宝，我想回家吃蛋糕,小兔子乖乖，把腿掰开，我要进来，不掰不掰我不掰，套套都不带，叔叔你真坏
+    }
 }
