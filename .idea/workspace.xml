@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b958af7-e30f-4f1d-951f-4d3cd324afd0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenuController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/typing_corrector_settings.xml" afterPath="$PROJECT_DIR$/.idea/typing_corrector_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Fileio/DB.java" afterPath="$PROJECT_DIR$/src/Fileio/DB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenu.fxml" afterPath="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenu.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenuController.java" afterPath="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenuController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenuController.java" afterPath="$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenuController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyTi/MyTiSystem.java" afterPath="$PROJECT_DIR$/src/MyTi/MyTiSystem.java" />
     </list>
     <ignored path="APAssignment2.iws" />
@@ -48,72 +45,89 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1500">
               <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DB.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Fileio/DB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="36" column="94" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
               <folding>
-                <marker date="1476532071000" expanded="true" signature="862:890" ph="DROP table s... " />
-                <marker date="1476532071000" expanded="true" signature="947:973" ph="DROP table u... " />
-                <marker date="1476532071000" expanded="true" signature="1030:1061" ph="DROP table t... " />
-                <marker date="1476532071000" expanded="true" signature="1118:1146" ph="DROP table h... " />
-                <marker date="1476532071000" expanded="true" signature="1203:1229" ph="DROP table t... " />
-                <marker date="1476532071000" expanded="true" signature="1286:1319" ph="DROP table t... " />
-                <marker date="1476532071000" expanded="true" signature="1376:1414" ph="DROP TABLE t... " />
-                <marker date="1476532071000" expanded="true" signature="1471:1526" ph="CREATE table... station" />
-                <marker date="1476532071000" expanded="true" signature="1582:1717" ph="CREATE TABLE... users" />
-                <marker date="1476532071000" expanded="true" signature="1773:1902" ph="CREATE TABLE... travelpass" />
-                <marker date="1476532071000" expanded="true" signature="1958:2144" ph="CREATE TABLE... history" />
-                <marker date="1476532071000" expanded="true" signature="2200:2297" ph="CREATE TABLE... topup" />
-                <marker date="1476532071000" expanded="true" signature="2353:2542" ph="CREATE TABLE... topuphistory" />
-                <marker date="1476532071000" expanded="true" signature="2598:2789" ph="CREATE TABLE... travelpasshistory" />
-                <marker date="1476532071000" expanded="true" signature="2908:2949" ph="insert into station... " />
-                <marker date="1476532071000" expanded="true" signature="3047:3090" ph="insert into station... " />
-                <marker date="1476532071000" expanded="true" signature="3131:3172" ph="INSERT into station... " />
-                <marker date="1476532071000" expanded="true" signature="3213:3254" ph="insert into station... " />
-                <marker date="1476532071000" expanded="true" signature="3295:3334" ph="insert into station... " />
-                <marker date="1476532071000" expanded="true" signature="3454:3541" ph="insert into users... " />
-                <marker date="1476532071000" expanded="true" signature="3597:3656" ph="insert into users... " />
-                <marker date="1476532071000" expanded="true" signature="4236:4355" ph="insert into travelpass... " />
-                <marker date="1476532071000" expanded="true" signature="4453:4522" ph="insert into history... " />
-                <marker date="1476532071000" expanded="true" signature="4976:5081" ph="insert into users... " />
-                <marker date="1476532071000" expanded="true" signature="5486:5583" ph="insert into users... " />
-                <marker date="1476532071000" expanded="true" signature="5991:6048" ph="select balan... users" />
-                <marker date="1476532071000" expanded="true" signature="6639:6689" ph="Select type users" />
-                <marker date="1476532071000" expanded="true" signature="7327:7380" ph="select balan... users" />
-                <marker date="1476532071000" expanded="true" signature="7557:7644" ph="UPDATE users... " />
-                <marker date="1476532071000" expanded="true" signature="7849:7916" ph="insert into topup... " />
-                <marker date="1476532071000" expanded="true" signature="7953:8009" ph="insert into topuphistory... " />
-                <marker date="1476532071000" expanded="true" signature="8459:8537" ph="SELECT topup... topuphistory" />
-                <marker date="1476532071000" expanded="true" signature="9175:9200" ph="SELECT name stations" />
-                <marker date="1476532071000" expanded="true" signature="9683:9723" ph="Select zone " />
-                <marker date="1476532071000" expanded="true" signature="9683:9739" ph="Select zone " />
-                <marker date="1476532071000" expanded="true" signature="10178:10255" ph="SELECT passi... history" />
-                <marker date="1476532071000" expanded="true" signature="10944:10990" ph="SELECT * FRO... history" />
-                <marker date="1476532071000" expanded="true" signature="11487:11540" ph="select balan... users" />
-                <marker date="1476532071000" expanded="true" signature="11717:11804" ph="UPDATE users... " />
-                <marker date="1476532071000" expanded="true" signature="12294:12337" ph="Select passi... history" />
-                <marker date="1476532071000" expanded="true" signature="12294:12406" ph="Select passi... history" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1328#1329#0" expanded="false" />
+                <element signature="e#1366#1367#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReportMenuController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenuController.java">
+      <file leaf-file-name="DB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Fileio/DB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="419">
+              <caret line="312" column="0" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
+              <folding>
+                <marker date="1476585360000" expanded="true" signature="862:890" ph="DROP table s... " />
+                <marker date="1476585360000" expanded="true" signature="947:973" ph="DROP table u... " />
+                <marker date="1476585360000" expanded="true" signature="1030:1061" ph="DROP table t... " />
+                <marker date="1476585360000" expanded="true" signature="1118:1146" ph="DROP table h... " />
+                <marker date="1476585360000" expanded="true" signature="1203:1229" ph="DROP table t... " />
+                <marker date="1476585360000" expanded="true" signature="1286:1319" ph="DROP table t... " />
+                <marker date="1476585360000" expanded="true" signature="1376:1414" ph="DROP TABLE t... " />
+                <marker date="1476585360000" expanded="true" signature="1471:1526" ph="CREATE table... station" />
+                <marker date="1476585360000" expanded="true" signature="1582:1717" ph="CREATE TABLE... users" />
+                <marker date="1476585360000" expanded="true" signature="1773:1902" ph="CREATE TABLE... travelpass" />
+                <marker date="1476585360000" expanded="true" signature="1958:2144" ph="CREATE TABLE... history" />
+                <marker date="1476585360000" expanded="true" signature="2200:2297" ph="CREATE TABLE... topup" />
+                <marker date="1476585360000" expanded="true" signature="2353:2542" ph="CREATE TABLE... topuphistory" />
+                <marker date="1476585360000" expanded="true" signature="2598:2815" ph="CREATE TABLE... travelpasshistory" />
+                <marker date="1476585360000" expanded="true" signature="2934:2975" ph="insert into station... " />
+                <marker date="1476585360000" expanded="true" signature="3073:3116" ph="insert into station... " />
+                <marker date="1476585360000" expanded="true" signature="3157:3198" ph="INSERT into station... " />
+                <marker date="1476585360000" expanded="true" signature="3239:3280" ph="insert into station... " />
+                <marker date="1476585360000" expanded="true" signature="3321:3360" ph="insert into station... " />
+                <marker date="1476585360000" expanded="true" signature="3480:3567" ph="insert into users... " />
+                <marker date="1476585360000" expanded="true" signature="3623:3682" ph="insert into users... " />
+                <marker date="1476585360000" expanded="true" signature="4299:4418" ph="insert into travelpass... " />
+                <marker date="1476585360000" expanded="true" signature="4516:4585" ph="insert into history... " />
+                <marker date="1476585360000" expanded="true" signature="5039:5144" ph="insert into users... " />
+                <marker date="1476585360000" expanded="true" signature="5549:5646" ph="insert into users... " />
+                <marker date="1476585360000" expanded="true" signature="6054:6111" ph="select balan... users" />
+                <marker date="1476585360000" expanded="true" signature="6704:6758" ph="Select type users" />
+                <marker date="1476585360000" expanded="true" signature="7399:7452" ph="select balan... users" />
+                <marker date="1476585360000" expanded="true" signature="7629:7716" ph="UPDATE users... " />
+                <marker date="1476585360000" expanded="true" signature="7921:7988" ph="insert into topup... " />
+                <marker date="1476585360000" expanded="true" signature="8025:8081" ph="insert into topuphistory... " />
+                <marker date="1476585360000" expanded="true" signature="8531:8609" ph="SELECT topup... topuphistory" />
+                <marker date="1476585360000" expanded="true" signature="9247:9272" ph="SELECT name stations" />
+                <marker date="1476585360000" expanded="true" signature="9755:9795" ph="Select zone " />
+                <marker date="1476585360000" expanded="true" signature="9755:9811" ph="Select zone " />
+                <marker date="1476585360000" expanded="true" signature="10250:10327" ph="SELECT passi... history" />
+                <marker date="1476585360000" expanded="true" signature="11018:11049" ph="SELECT * FRO... history" />
+                <marker date="1476585360000" expanded="true" signature="11621:11674" ph="select balan... users" />
+                <marker date="1476585360000" expanded="true" signature="11851:11938" ph="UPDATE users... " />
+                <marker date="1476585360000" expanded="true" signature="12430:12473" ph="Select passi... history" />
+                <marker date="1476585360000" expanded="true" signature="12430:12546" ph="Select passi... history" />
+                <marker date="1476585360000" expanded="true" signature="13316:13357" ph="SELECT stati... travelpasshistory" />
+                <marker date="1476585360000" expanded="true" signature="14006:14045" ph="SELECT stati... travelpasshistory" />
+                <marker date="1476585360000" expanded="true" signature="14006:14046" ph="SELECT stati... travelpasshistory" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyTiSystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyTi/MyTiSystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="521" column="22" selection-start-line="521" selection-start-column="22" selection-end-line="521" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#470#471#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReportMenuController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,7 +176,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="645">
               <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#2732#2733#0" expanded="false" />
+                <element signature="e#2760#2761#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -247,10 +265,10 @@
         <option value="$PROJECT_DIR$/src/MyTi/Users.java" />
         <option value="$PROJECT_DIR$/src/MyTi/UsersData.java" />
         <option value="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenu.fxml" />
-        <option value="$PROJECT_DIR$/src/MyTi/MyTiSystem.java" />
         <option value="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenuController.java" />
-        <option value="$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenuController.java" />
+        <option value="$PROJECT_DIR$/src/MyTi/MyTiSystem.java" />
         <option value="$PROJECT_DIR$/src/Fileio/DB.java" />
+        <option value="$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenuController.java" />
       </list>
     </option>
   </component>
@@ -316,6 +334,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -500,9 +519,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1124,11 +1142,12 @@
       <workItem from="1476422303494" duration="572000" />
       <workItem from="1476521795584" duration="1164000" />
       <workItem from="1476531726496" duration="344000" />
+      <workItem from="1476582580104" duration="2762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83237000" />
+    <option name="totallyTimeSpent" value="85999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="982" extended-state="0" />
@@ -1162,7 +1181,7 @@
     </layout>
   </component>
   <component name="TypingCorrectorSettings">
-    <option name="CHARS_CORRECTED" value="13" />
+    <option name="CHARS_CORRECTED" value="16" />
     <option name="LAYOUT_CHARS_CORRECTED" value="2" />
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1236,54 +1255,54 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/AdminMenu/AdminMenu.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
           <caret line="50" column="78" selection-start-line="50" selection-start-column="78" selection-end-line="50" selection-end-column="78" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainCenter.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainCenter.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainMenu.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainMenu.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenu.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenu.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/TopUpMenu/TopUpMenu.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/TopUpMenu/TopUpMenu.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RunFromCLI.java">
@@ -1356,23 +1375,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyTi/MyTiSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="1493" column="9" selection-start-line="1493" selection-start-column="9" selection-end-line="1493" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenu.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/TopUpMenu/TopUpMenuConrtoller.java">
@@ -1411,7 +1422,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2732#2733#0" expanded="false" />
+            <element signature="e#2760#2761#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1429,68 +1444,83 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1500">
           <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1328#1329#0" expanded="false" />
+            <element signature="e#1366#1367#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenuController.java">
+    <entry file="file://$PROJECT_DIR$/src/MyTi/MyTiSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="521" column="22" selection-start-line="521" selection-start-column="22" selection-end-line="521" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Fileio/DB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="36" column="94" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
+        <state relative-caret-position="419">
+          <caret line="312" column="0" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
           <folding>
-            <marker date="1476532071000" expanded="true" signature="862:890" ph="DROP table s... " />
-            <marker date="1476532071000" expanded="true" signature="947:973" ph="DROP table u... " />
-            <marker date="1476532071000" expanded="true" signature="1030:1061" ph="DROP table t... " />
-            <marker date="1476532071000" expanded="true" signature="1118:1146" ph="DROP table h... " />
-            <marker date="1476532071000" expanded="true" signature="1203:1229" ph="DROP table t... " />
-            <marker date="1476532071000" expanded="true" signature="1286:1319" ph="DROP table t... " />
-            <marker date="1476532071000" expanded="true" signature="1376:1414" ph="DROP TABLE t... " />
-            <marker date="1476532071000" expanded="true" signature="1471:1526" ph="CREATE table... station" />
-            <marker date="1476532071000" expanded="true" signature="1582:1717" ph="CREATE TABLE... users" />
-            <marker date="1476532071000" expanded="true" signature="1773:1902" ph="CREATE TABLE... travelpass" />
-            <marker date="1476532071000" expanded="true" signature="1958:2144" ph="CREATE TABLE... history" />
-            <marker date="1476532071000" expanded="true" signature="2200:2297" ph="CREATE TABLE... topup" />
-            <marker date="1476532071000" expanded="true" signature="2353:2542" ph="CREATE TABLE... topuphistory" />
-            <marker date="1476532071000" expanded="true" signature="2598:2789" ph="CREATE TABLE... travelpasshistory" />
-            <marker date="1476532071000" expanded="true" signature="2908:2949" ph="insert into station... " />
-            <marker date="1476532071000" expanded="true" signature="3047:3090" ph="insert into station... " />
-            <marker date="1476532071000" expanded="true" signature="3131:3172" ph="INSERT into station... " />
-            <marker date="1476532071000" expanded="true" signature="3213:3254" ph="insert into station... " />
-            <marker date="1476532071000" expanded="true" signature="3295:3334" ph="insert into station... " />
-            <marker date="1476532071000" expanded="true" signature="3454:3541" ph="insert into users... " />
-            <marker date="1476532071000" expanded="true" signature="3597:3656" ph="insert into users... " />
-            <marker date="1476532071000" expanded="true" signature="4236:4355" ph="insert into travelpass... " />
-            <marker date="1476532071000" expanded="true" signature="4453:4522" ph="insert into history... " />
-            <marker date="1476532071000" expanded="true" signature="4976:5081" ph="insert into users... " />
-            <marker date="1476532071000" expanded="true" signature="5486:5583" ph="insert into users... " />
-            <marker date="1476532071000" expanded="true" signature="5991:6048" ph="select balan... users" />
-            <marker date="1476532071000" expanded="true" signature="6639:6689" ph="Select type users" />
-            <marker date="1476532071000" expanded="true" signature="7327:7380" ph="select balan... users" />
-            <marker date="1476532071000" expanded="true" signature="7557:7644" ph="UPDATE users... " />
-            <marker date="1476532071000" expanded="true" signature="7849:7916" ph="insert into topup... " />
-            <marker date="1476532071000" expanded="true" signature="7953:8009" ph="insert into topuphistory... " />
-            <marker date="1476532071000" expanded="true" signature="8459:8537" ph="SELECT topup... topuphistory" />
-            <marker date="1476532071000" expanded="true" signature="9175:9200" ph="SELECT name stations" />
-            <marker date="1476532071000" expanded="true" signature="9683:9723" ph="Select zone " />
-            <marker date="1476532071000" expanded="true" signature="9683:9739" ph="Select zone " />
-            <marker date="1476532071000" expanded="true" signature="10178:10255" ph="SELECT passi... history" />
-            <marker date="1476532071000" expanded="true" signature="10944:10990" ph="SELECT * FRO... history" />
-            <marker date="1476532071000" expanded="true" signature="11487:11540" ph="select balan... users" />
-            <marker date="1476532071000" expanded="true" signature="11717:11804" ph="UPDATE users... " />
-            <marker date="1476532071000" expanded="true" signature="12294:12337" ph="Select passi... history" />
-            <marker date="1476532071000" expanded="true" signature="12294:12406" ph="Select passi... history" />
+            <marker date="1476585360000" expanded="true" signature="862:890" ph="DROP table s... " />
+            <marker date="1476585360000" expanded="true" signature="947:973" ph="DROP table u... " />
+            <marker date="1476585360000" expanded="true" signature="1030:1061" ph="DROP table t... " />
+            <marker date="1476585360000" expanded="true" signature="1118:1146" ph="DROP table h... " />
+            <marker date="1476585360000" expanded="true" signature="1203:1229" ph="DROP table t... " />
+            <marker date="1476585360000" expanded="true" signature="1286:1319" ph="DROP table t... " />
+            <marker date="1476585360000" expanded="true" signature="1376:1414" ph="DROP TABLE t... " />
+            <marker date="1476585360000" expanded="true" signature="1471:1526" ph="CREATE table... station" />
+            <marker date="1476585360000" expanded="true" signature="1582:1717" ph="CREATE TABLE... users" />
+            <marker date="1476585360000" expanded="true" signature="1773:1902" ph="CREATE TABLE... travelpass" />
+            <marker date="1476585360000" expanded="true" signature="1958:2144" ph="CREATE TABLE... history" />
+            <marker date="1476585360000" expanded="true" signature="2200:2297" ph="CREATE TABLE... topup" />
+            <marker date="1476585360000" expanded="true" signature="2353:2542" ph="CREATE TABLE... topuphistory" />
+            <marker date="1476585360000" expanded="true" signature="2598:2815" ph="CREATE TABLE... travelpasshistory" />
+            <marker date="1476585360000" expanded="true" signature="2934:2975" ph="insert into station... " />
+            <marker date="1476585360000" expanded="true" signature="3073:3116" ph="insert into station... " />
+            <marker date="1476585360000" expanded="true" signature="3157:3198" ph="INSERT into station... " />
+            <marker date="1476585360000" expanded="true" signature="3239:3280" ph="insert into station... " />
+            <marker date="1476585360000" expanded="true" signature="3321:3360" ph="insert into station... " />
+            <marker date="1476585360000" expanded="true" signature="3480:3567" ph="insert into users... " />
+            <marker date="1476585360000" expanded="true" signature="3623:3682" ph="insert into users... " />
+            <marker date="1476585360000" expanded="true" signature="4299:4418" ph="insert into travelpass... " />
+            <marker date="1476585360000" expanded="true" signature="4516:4585" ph="insert into history... " />
+            <marker date="1476585360000" expanded="true" signature="5039:5144" ph="insert into users... " />
+            <marker date="1476585360000" expanded="true" signature="5549:5646" ph="insert into users... " />
+            <marker date="1476585360000" expanded="true" signature="6054:6111" ph="select balan... users" />
+            <marker date="1476585360000" expanded="true" signature="6704:6758" ph="Select type users" />
+            <marker date="1476585360000" expanded="true" signature="7399:7452" ph="select balan... users" />
+            <marker date="1476585360000" expanded="true" signature="7629:7716" ph="UPDATE users... " />
+            <marker date="1476585360000" expanded="true" signature="7921:7988" ph="insert into topup... " />
+            <marker date="1476585360000" expanded="true" signature="8025:8081" ph="insert into topuphistory... " />
+            <marker date="1476585360000" expanded="true" signature="8531:8609" ph="SELECT topup... topuphistory" />
+            <marker date="1476585360000" expanded="true" signature="9247:9272" ph="SELECT name stations" />
+            <marker date="1476585360000" expanded="true" signature="9755:9795" ph="Select zone " />
+            <marker date="1476585360000" expanded="true" signature="9755:9811" ph="Select zone " />
+            <marker date="1476585360000" expanded="true" signature="10250:10327" ph="SELECT passi... history" />
+            <marker date="1476585360000" expanded="true" signature="11018:11049" ph="SELECT * FRO... history" />
+            <marker date="1476585360000" expanded="true" signature="11621:11674" ph="select balan... users" />
+            <marker date="1476585360000" expanded="true" signature="11851:11938" ph="UPDATE users... " />
+            <marker date="1476585360000" expanded="true" signature="12430:12473" ph="Select passi... history" />
+            <marker date="1476585360000" expanded="true" signature="12430:12546" ph="Select passi... history" />
+            <marker date="1476585360000" expanded="true" signature="13316:13357" ph="SELECT stati... travelpasshistory" />
+            <marker date="1476585360000" expanded="true" signature="14006:14045" ph="SELECT stati... travelpasshistory" />
+            <marker date="1476585360000" expanded="true" signature="14006:14046" ph="SELECT stati... travelpasshistory" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

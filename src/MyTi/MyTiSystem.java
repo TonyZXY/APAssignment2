@@ -461,8 +461,8 @@ public class MyTiSystem {
         runAdminMenu();
     }
 
-    private HashMap<String, Integer> stationStartStatistics = new HashMap<>();
-    private HashMap<String, Integer> stationEndStatistics = new HashMap<>();
+    private static HashMap<String, Integer> stationStartStatistics = new HashMap<>();
+    private static HashMap<String, Integer> stationEndStatistics = new HashMap<>();
 
     private void addStationName() {
         for (int i = 0; i < UsersData.stationsName.size(); i++) {
@@ -484,6 +484,42 @@ public class MyTiSystem {
             String stationName = TravelPassHistory.travelPassHistory.get(i).getTravelPass().getEndName();
             stationEndStatistics.put(stationName, stationEndStatistics.get(stationName) + 1);
         }
+    }
+
+    private static void addStationNameDB(){
+        ArrayList<String> station = Fileio.DB.getStation();
+        for (String stationName : station) {
+            stationStartStatistics.put(stationName, 0);
+            stationEndStatistics.put(stationName, 0);
+        }
+    }
+
+    private static void addStationStartDB(){
+        ArrayList<String> station = Fileio.DB.getStationStartReportDB();
+        for(String aStation:station){
+            stationStartStatistics.put(aStation,stationStartStatistics.get(aStation)+1);
+        }
+    }
+
+    private static void addStationEndDB(){
+        ArrayList<String> station = Fileio.DB.getStationTOReportDB();
+        for(String aStation:station){
+            stationEndStatistics.put(aStation,stationEndStatistics.get(aStation)+1);
+        }
+    }
+
+    public static ArrayList generateStationsStatistics(){
+        addStationNameDB();
+        addStationEndDB();
+        addStationStartDB();
+        ArrayList<String> station = Fileio.DB.getStation();
+        ArrayList<String> report = new ArrayList<>();
+        for(String aStation:station){
+            int start = stationStartStatistics.get(aStation);
+            int end = stationEndStatistics.get(aStation);
+            report.add(aStation + ": "+start+" journeys start and "+ end+ " journey end here");
+        }
+        return report;
     }
 
     private void showStationStatistics() {

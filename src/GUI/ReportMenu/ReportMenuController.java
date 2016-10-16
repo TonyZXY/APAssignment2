@@ -1,9 +1,12 @@
 package GUI.ReportMenu;
 
 import Fileio.DB;
+import MyTi.MyTiSystem;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+
+import java.util.ArrayList;
 
 /**
  * Project APAssignment2
@@ -21,11 +24,21 @@ public class ReportMenuController {
 
     @FXML
     private void setTravelPassBtn(){
-        Fileio.DB.allTravelReport();
+        reportArea.clear();
+        ArrayList<String> report = Fileio.DB.allTravelReport();
+        reportArea.appendText("Travel Pass Report");
+        for (String aReport : report) {
+            reportArea.appendText(aReport);
+        }
     }
 
     @FXML
     private void setStationBtn(){
-
+        reportArea.clear();
+        ArrayList<String> report = MyTiSystem.generateStationsStatistics();
+        reportArea.appendText("Station report");
+        for(String aReport:report){
+            reportArea.appendText(aReport);
+        }
     }
 }
