@@ -34,6 +34,7 @@ public class Main extends Application {
 //        mainLayout.getChildren().add(digitalClock)
         Scene scene = new Scene(mainLayout);
         primaryStage.setScene(scene);
+        MainMenuController.bindToTime();
         primaryStage.show();
     }
 

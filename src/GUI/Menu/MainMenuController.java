@@ -1,17 +1,24 @@
 package GUI.Menu;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.util.Duration;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MainMenuController {
 
     @FXML
-    private Label showTimer;
+    private static Label showTimer;
 
     private Main main;
 
@@ -36,22 +43,21 @@ public class MainMenuController {
     }
 
     @FXML
-    private void showTime() throws Exception {
-        Calendar time = Calendar.getInstance();
-        String hourString = pad(2, ' ', time.get(Calendar.HOUR) == 0 ? "12" : time.get(Calendar.HOUR) + "");
-        String minuteString = pad(2, '0', time.get(Calendar.MINUTE) + "");
-        String secondString = pad(2, '0', time.get(Calendar.SECOND) + "");
-        String ampmString = time.get(Calendar.AM_PM) == Calendar.AM ? "AM" : "PM";
-        showTimer.setText(hourString + ":" + minuteString + ":" + secondString + " " + ampmString);
+    public static void bindToTime() {
+        Timeline timeline = new Timeline(
+                new KeyFrame(Duration.seconds(0),
+                        new EventHandler<ActionEvent>() {
+                            @Override public void handle(ActionEvent actionEvent) {
+                                Calendar time = Calendar.getInstance();
+                                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
+                                showTimer.setText(simpleDateFormat.format(time.getTime()));
+                            }
+                        }
+                ),
+                new KeyFrame(Duration.seconds(1))
+        );
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
     }
 
-    private static String pad(int fieldWidth, char padChar, String s) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = s.length(); i < fieldWidth; i++) {
-            sb.append(padChar);
-        }
-        sb.append(s);
-
-        return sb.toString();
-    }
 }

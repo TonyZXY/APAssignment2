@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b958af7-e30f-4f1d-951f-4d3cd324afd0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RunFromGUIandDB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Menu/Main.java" afterPath="$PROJECT_DIR$/src/GUI/Menu/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/Menu/MainMenuController.java" afterPath="$PROJECT_DIR$/src/GUI/Menu/MainMenuController.java" />
     </list>
     <ignored path="APAssignment2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,217 +39,164 @@
     <favorites_list name="APAssignment2" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MyTiSystem.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/MyTi/MyTiSystem.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2280">
-                  <caret line="1339" column="38" selection-start-line="1339" selection-start-column="38" selection-end-line="1339" selection-end-column="38" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UsersData.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/MyTi/UsersData.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="464">
-                  <caret line="128" column="24" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DB.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Fileio/DB.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1155">
-                  <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
-                  <folding>
-                    <marker date="1476615241000" expanded="true" signature="897:925" ph="DROP table s... " />
-                    <marker date="1476615241000" expanded="true" signature="982:1008" ph="DROP table u... " />
-                    <marker date="1476615241000" expanded="true" signature="1065:1096" ph="DROP table t... " />
-                    <marker date="1476615241000" expanded="true" signature="1153:1181" ph="DROP table h... " />
-                    <marker date="1476615241000" expanded="true" signature="1238:1264" ph="DROP table t... " />
-                    <marker date="1476615241000" expanded="true" signature="1321:1354" ph="DROP table t... " />
-                    <marker date="1476615241000" expanded="true" signature="1411:1449" ph="DROP TABLE t... " />
-                    <marker date="1476615241000" expanded="true" signature="1506:1561" ph="CREATE table... station" />
-                    <marker date="1476615241000" expanded="true" signature="1617:1752" ph="CREATE TABLE... users" />
-                    <marker date="1476615241000" expanded="true" signature="1808:1937" ph="CREATE TABLE... travelpass" />
-                    <marker date="1476615241000" expanded="true" signature="1993:2179" ph="CREATE TABLE... history" />
-                    <marker date="1476615241000" expanded="true" signature="2235:2332" ph="CREATE TABLE... topup" />
-                    <marker date="1476615241000" expanded="true" signature="2388:2577" ph="CREATE TABLE... topuphistory" />
-                    <marker date="1476615241000" expanded="true" signature="2633:2850" ph="CREATE TABLE... travelpasshistory" />
-                    <marker date="1476615241000" expanded="true" signature="2969:3010" ph="insert into station... " />
-                    <marker date="1476615241000" expanded="true" signature="3108:3151" ph="insert into station... " />
-                    <marker date="1476615241000" expanded="true" signature="3192:3233" ph="INSERT into station... " />
-                    <marker date="1476615241000" expanded="true" signature="3274:3315" ph="insert into station... " />
-                    <marker date="1476615241000" expanded="true" signature="3356:3395" ph="insert into station... " />
-                    <marker date="1476615241000" expanded="true" signature="3515:3602" ph="insert into users... " />
-                    <marker date="1476615241000" expanded="true" signature="3658:3717" ph="insert into users... " />
-                    <marker date="1476615241000" expanded="true" signature="4392:4518" ph="insert into travelpass... " />
-                    <marker date="1476615241000" expanded="true" signature="4616:4685" ph="insert into history... " />
-                    <marker date="1476615241000" expanded="true" signature="5212:5341" ph="insert into travelpasshistory... " />
-                    <marker date="1476615241000" expanded="true" signature="5786:5891" ph="insert into users... " />
-                    <marker date="1476615241000" expanded="true" signature="6296:6393" ph="insert into users... " />
-                    <marker date="1476615241000" expanded="true" signature="6858:6916" ph="SELECT max(p... history" />
-                    <marker date="1476615241000" expanded="true" signature="7379:7436" ph="select balan... users" />
-                    <marker date="1476615241000" expanded="true" signature="8029:8083" ph="Select type users" />
-                    <marker date="1476615241000" expanded="true" signature="8731:8784" ph="select balan... users" />
-                    <marker date="1476615241000" expanded="true" signature="8961:9048" ph="UPDATE users... " />
-                    <marker date="1476615241000" expanded="true" signature="9253:9320" ph="insert into topup... " />
-                    <marker date="1476615241000" expanded="true" signature="9357:9413" ph="insert into topuphistory... " />
-                    <marker date="1476615241000" expanded="true" signature="9863:9941" ph="SELECT topup... topuphistory" />
-                    <marker date="1476615241000" expanded="true" signature="10745:10900" ph="Select trave... history" />
-                    <marker date="1476615241000" expanded="true" signature="11653:11678" ph="SELECT name stations" />
-                    <marker date="1476615241000" expanded="true" signature="12161:12201" ph="Select zone " />
-                    <marker date="1476615241000" expanded="true" signature="12161:12217" ph="Select zone " />
-                    <marker date="1476615241000" expanded="true" signature="12656:12733" ph="SELECT passi... history" />
-                    <marker date="1476615241000" expanded="true" signature="13424:13455" ph="SELECT * FRO... history" />
-                    <marker date="1476615241000" expanded="true" signature="14038:14091" ph="select balan... users" />
-                    <marker date="1476615241000" expanded="true" signature="14333:14420" ph="UPDATE users... " />
-                    <marker date="1476615241000" expanded="true" signature="14912:14955" ph="Select passi... history" />
-                    <marker date="1476615241000" expanded="true" signature="14912:15028" ph="Select passi... history" />
-                    <marker date="1476615241000" expanded="true" signature="15798:15839" ph="SELECT stati... travelpasshistory" />
-                    <marker date="1476615241000" expanded="true" signature="16488:16527" ph="SELECT stati... travelpasshistory" />
-                    <marker date="1476615241000" expanded="true" signature="16488:16528" ph="SELECT stati... travelpasshistory" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CustomerMenuController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenuController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1861">
-                  <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AdminMenuController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/GUI/AdminMenu/AdminMenuController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="899">
-                  <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MainCenter.fxml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainCenter.fxml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="129">
-                  <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-                  <folding />
-                </state>
-              </provider>
-              <provider editor-type-id="JavaFX-Scene-Builder">
-                <state />
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DigitalClock.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/GUI/Menu/DigitalClock.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/GUI/Menu/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MainMenuController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainMenuController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="DB.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Fileio/DB.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="5550">
-                  <caret line="378" column="0" selection-start-line="378" selection-start-column="0" selection-end-line="378" selection-end-column="0" />
-                  <folding>
-                    <marker date="1476615241000" expanded="true" signature="897:925" ph="DROP table s... " />
-                    <marker date="1476615241000" expanded="true" signature="982:1008" ph="DROP table u... " />
-                    <marker date="1476615241000" expanded="true" signature="1065:1096" ph="DROP table t... " />
-                    <marker date="1476615241000" expanded="true" signature="1153:1181" ph="DROP table h... " />
-                    <marker date="1476615241000" expanded="true" signature="1238:1264" ph="DROP table t... " />
-                    <marker date="1476615241000" expanded="true" signature="1321:1354" ph="DROP table t... " />
-                    <marker date="1476615241000" expanded="true" signature="1411:1449" ph="DROP TABLE t... " />
-                    <marker date="1476615241000" expanded="true" signature="1506:1561" ph="CREATE table... station" />
-                    <marker date="1476615241000" expanded="true" signature="1617:1752" ph="CREATE TABLE... users" />
-                    <marker date="1476615241000" expanded="true" signature="1808:1937" ph="CREATE TABLE... travelpass" />
-                    <marker date="1476615241000" expanded="true" signature="1993:2179" ph="CREATE TABLE... history" />
-                    <marker date="1476615241000" expanded="true" signature="2235:2332" ph="CREATE TABLE... topup" />
-                    <marker date="1476615241000" expanded="true" signature="2388:2577" ph="CREATE TABLE... topuphistory" />
-                    <marker date="1476615241000" expanded="true" signature="2633:2850" ph="CREATE TABLE... travelpasshistory" />
-                    <marker date="1476615241000" expanded="true" signature="2969:3010" ph="insert into station... " />
-                    <marker date="1476615241000" expanded="true" signature="3108:3151" ph="insert into station... " />
-                    <marker date="1476615241000" expanded="true" signature="3192:3233" ph="INSERT into station... " />
-                    <marker date="1476615241000" expanded="true" signature="3274:3315" ph="insert into station... " />
-                    <marker date="1476615241000" expanded="true" signature="3356:3395" ph="insert into station... " />
-                    <marker date="1476615241000" expanded="true" signature="3515:3602" ph="insert into users... " />
-                    <marker date="1476615241000" expanded="true" signature="3658:3717" ph="insert into users... " />
-                    <marker date="1476615241000" expanded="true" signature="4392:4518" ph="insert into travelpass... " />
-                    <marker date="1476615241000" expanded="true" signature="4616:4685" ph="insert into history... " />
-                    <marker date="1476615241000" expanded="true" signature="5212:5341" ph="insert into travelpasshistory... " />
-                    <marker date="1476615241000" expanded="true" signature="5786:5891" ph="insert into users... " />
-                    <marker date="1476615241000" expanded="true" signature="6296:6393" ph="insert into users... " />
-                    <marker date="1476615241000" expanded="true" signature="6858:6916" ph="SELECT max(p... history" />
-                    <marker date="1476615241000" expanded="true" signature="7379:7436" ph="select balan... users" />
-                    <marker date="1476615241000" expanded="true" signature="8029:8083" ph="Select type users" />
-                    <marker date="1476615241000" expanded="true" signature="8731:8784" ph="select balan... users" />
-                    <marker date="1476615241000" expanded="true" signature="8961:9048" ph="UPDATE users... " />
-                    <marker date="1476615241000" expanded="true" signature="9253:9320" ph="insert into topup... " />
-                    <marker date="1476615241000" expanded="true" signature="9357:9413" ph="insert into topuphistory... " />
-                    <marker date="1476615241000" expanded="true" signature="9863:9941" ph="SELECT topup... topuphistory" />
-                    <marker date="1476615241000" expanded="true" signature="10745:10900" ph="Select trave... history" />
-                    <marker date="1476615241000" expanded="true" signature="11653:11678" ph="SELECT name stations" />
-                    <marker date="1476615241000" expanded="true" signature="12161:12201" ph="Select zone " />
-                    <marker date="1476615241000" expanded="true" signature="12161:12217" ph="Select zone " />
-                    <marker date="1476615241000" expanded="true" signature="12656:12733" ph="SELECT passi... history" />
-                    <marker date="1476615241000" expanded="true" signature="13424:13455" ph="SELECT * FRO... history" />
-                    <marker date="1476615241000" expanded="true" signature="14038:14091" ph="select balan... users" />
-                    <marker date="1476615241000" expanded="true" signature="14333:14420" ph="UPDATE users... " />
-                    <marker date="1476615241000" expanded="true" signature="14912:14955" ph="Select passi... history" />
-                    <marker date="1476615241000" expanded="true" signature="14912:15028" ph="Select passi... history" />
-                    <marker date="1476615241000" expanded="true" signature="15798:15839" ph="SELECT stati... travelpasshistory" />
-                    <marker date="1476615241000" expanded="true" signature="16488:16527" ph="SELECT stati... travelpasshistory" />
-                    <marker date="1476615241000" expanded="true" signature="16488:16528" ph="SELECT stati... travelpasshistory" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="DB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Fileio/DB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1335">
+              <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+              <folding>
+                <marker date="1476615241000" expanded="true" signature="897:925" ph="DROP table s... " />
+                <marker date="1476615241000" expanded="true" signature="982:1008" ph="DROP table u... " />
+                <marker date="1476615241000" expanded="true" signature="1065:1096" ph="DROP table t... " />
+                <marker date="1476615241000" expanded="true" signature="1153:1181" ph="DROP table h... " />
+                <marker date="1476615241000" expanded="true" signature="1238:1264" ph="DROP table t... " />
+                <marker date="1476615241000" expanded="true" signature="1321:1354" ph="DROP table t... " />
+                <marker date="1476615241000" expanded="true" signature="1411:1449" ph="DROP TABLE t... " />
+                <marker date="1476615241000" expanded="true" signature="1506:1561" ph="CREATE table... station" />
+                <marker date="1476615241000" expanded="true" signature="1617:1752" ph="CREATE TABLE... users" />
+                <marker date="1476615241000" expanded="true" signature="1808:1937" ph="CREATE TABLE... travelpass" />
+                <marker date="1476615241000" expanded="true" signature="1993:2179" ph="CREATE TABLE... history" />
+                <marker date="1476615241000" expanded="true" signature="2235:2332" ph="CREATE TABLE... topup" />
+                <marker date="1476615241000" expanded="true" signature="2388:2577" ph="CREATE TABLE... topuphistory" />
+                <marker date="1476615241000" expanded="true" signature="2633:2850" ph="CREATE TABLE... travelpasshistory" />
+                <marker date="1476615241000" expanded="true" signature="2969:3010" ph="insert into station... " />
+                <marker date="1476615241000" expanded="true" signature="3108:3151" ph="insert into station... " />
+                <marker date="1476615241000" expanded="true" signature="3192:3233" ph="INSERT into station... " />
+                <marker date="1476615241000" expanded="true" signature="3274:3315" ph="insert into station... " />
+                <marker date="1476615241000" expanded="true" signature="3356:3395" ph="insert into station... " />
+                <marker date="1476615241000" expanded="true" signature="3515:3602" ph="insert into users... " />
+                <marker date="1476615241000" expanded="true" signature="3658:3717" ph="insert into users... " />
+                <marker date="1476615241000" expanded="true" signature="4392:4518" ph="insert into travelpass... " />
+                <marker date="1476615241000" expanded="true" signature="4616:4685" ph="insert into history... " />
+                <marker date="1476615241000" expanded="true" signature="5212:5341" ph="insert into travelpasshistory... " />
+                <marker date="1476615241000" expanded="true" signature="5786:5891" ph="insert into users... " />
+                <marker date="1476615241000" expanded="true" signature="6296:6393" ph="insert into users... " />
+                <marker date="1476615241000" expanded="true" signature="6858:6916" ph="SELECT max(p... history" />
+                <marker date="1476615241000" expanded="true" signature="7379:7436" ph="select balan... users" />
+                <marker date="1476615241000" expanded="true" signature="8029:8083" ph="Select type users" />
+                <marker date="1476615241000" expanded="true" signature="8731:8784" ph="select balan... users" />
+                <marker date="1476615241000" expanded="true" signature="8961:9048" ph="UPDATE users... " />
+                <marker date="1476615241000" expanded="true" signature="9253:9320" ph="insert into topup... " />
+                <marker date="1476615241000" expanded="true" signature="9357:9413" ph="insert into topuphistory... " />
+                <marker date="1476615241000" expanded="true" signature="9863:9941" ph="SELECT topup... topuphistory" />
+                <marker date="1476615241000" expanded="true" signature="10745:10900" ph="Select trave... history" />
+                <marker date="1476615241000" expanded="true" signature="11653:11678" ph="SELECT name stations" />
+                <marker date="1476615241000" expanded="true" signature="12161:12201" ph="Select zone " />
+                <marker date="1476615241000" expanded="true" signature="12161:12217" ph="Select zone " />
+                <marker date="1476615241000" expanded="true" signature="12656:12733" ph="SELECT passi... history" />
+                <marker date="1476615241000" expanded="true" signature="13424:13455" ph="SELECT * FRO... history" />
+                <marker date="1476615241000" expanded="true" signature="14038:14091" ph="select balan... users" />
+                <marker date="1476615241000" expanded="true" signature="14333:14420" ph="UPDATE users... " />
+                <marker date="1476615241000" expanded="true" signature="14912:14955" ph="Select passi... history" />
+                <marker date="1476615241000" expanded="true" signature="14912:15028" ph="Select passi... history" />
+                <marker date="1476615241000" expanded="true" signature="15798:15839" ph="SELECT stati... travelpasshistory" />
+                <marker date="1476615241000" expanded="true" signature="16488:16527" ph="SELECT stati... travelpasshistory" />
+                <marker date="1476615241000" expanded="true" signature="16488:16528" ph="SELECT stati... travelpasshistory" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerMenuController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminMenuController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/AdminMenu/AdminMenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="930">
+              <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainCenter.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainCenter.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DigitalClock.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Menu/DigitalClock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenu.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainMenu.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Menu/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunFromGUIandDB.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/RunFromGUIandDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunFromCLI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RunFromCLI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenuController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainMenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -267,7 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/MyTi/Station/Station.java" />
         <option value="$PROJECT_DIR$/src/GUI/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/GUI/MainMenu/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/GUI/MainMenu/MainMenuButton.java" />
@@ -297,10 +246,8 @@
         <option value="$PROJECT_DIR$/src/GUI/Menu/DigitalClockLabel.java" />
         <option value="$PROJECT_DIR$/src/GUI/Menu/DigitalClock.java" />
         <option value="$PROJECT_DIR$/src/GUI/AdminMenu/AdminMenu.fxml" />
-        <option value="$PROJECT_DIR$/src/GUI/Menu/Main.java" />
         <option value="$PROJECT_DIR$/src/GUI/Menu/MainCenter.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/Menu/MainMenu.fxml" />
-        <option value="$PROJECT_DIR$/src/GUI/Menu/MainMenuController.java" />
         <option value="$PROJECT_DIR$/src/GUI/ReportMenu/ReportMenu.fxml" />
         <option value="$PROJECT_DIR$/src/GUI/TopUpMenu/TopUpMenu.fxml" />
         <option value="$PROJECT_DIR$/src/RunFromCLI.java" />
@@ -318,6 +265,9 @@
         <option value="$PROJECT_DIR$/src/MyTi/UsersData.java" />
         <option value="$PROJECT_DIR$/src/Fileio/DB.java" />
         <option value="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenuController.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Menu/Main.java" />
+        <option value="$PROJECT_DIR$/src/GUI/Menu/MainMenuController.java" />
+        <option value="$PROJECT_DIR$/src/RunFromGUIandDB.java" />
       </list>
     </option>
   </component>
@@ -383,8 +333,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -591,7 +540,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1217,7 +1167,8 @@
       <workItem from="1476582580104" duration="2762000" />
       <workItem from="1476585660567" duration="1480000" />
       <workItem from="1476596342399" duration="7544000" />
-      <workItem from="1476612470195" duration="3026000" />
+      <workItem from="1476612470195" duration="3044000" />
+      <workItem from="1476615711610" duration="468000" />
     </task>
     <task id="LOCAL-00001" summary="add function">
       <created>1476601462870</created>
@@ -1240,11 +1191,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476615541870</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add function &#10;nearly finished">
+      <created>1476615550419</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1476615550419</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98049000" />
+    <option name="totallyTimeSpent" value="98535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="982" extended-state="0" />
@@ -1306,7 +1264,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/production/APAssignment2/GUI/MainMenu/Controller.class" />
     <entry file="file://$PROJECT_DIR$/out/production/APAssignment2/MyTi/OverAmountException.class" />
     <entry file="file://$PROJECT_DIR$/src/GUI/TopUpMenu/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/GUI/ReportMenu/sample.fxml" />
@@ -1364,23 +1321,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainMenu.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RunFromCLI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyTi/Station/Station.java">
@@ -1496,7 +1436,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyTi/MyTiSystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
+        <state relative-caret-position="19995">
           <caret line="1339" column="38" selection-start-line="1339" selection-start-column="38" selection-end-line="1339" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1506,7 +1446,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyTi/UsersData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
+        <state relative-caret-position="1590">
           <caret line="128" column="24" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
           <folding />
         </state>
@@ -1514,7 +1454,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Fileio/DB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
+        <state relative-caret-position="1335">
           <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
           <folding>
             <marker date="1476615241000" expanded="true" signature="897:925" ph="DROP table s... " />
@@ -1570,7 +1510,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1861">
+        <state relative-caret-position="300">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
@@ -1578,7 +1518,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/AdminMenu/AdminMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
+        <state relative-caret-position="930">
           <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
           <folding />
         </state>
@@ -1586,8 +1526,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainCenter.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
+        <state relative-caret-position="150">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainMenu.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1603,19 +1554,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Menu/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="50" column="43" selection-start-line="50" selection-start-column="43" selection-end-line="50" selection-end-column="43" />
+        <state relative-caret-position="435">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Menu/MainMenuController.java">
+    <entry file="file://$PROJECT_DIR$/src/RunFromCLI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        <state relative-caret-position="225">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Menu/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RunFromGUIandDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
