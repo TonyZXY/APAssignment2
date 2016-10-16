@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b958af7-e30f-4f1d-951f-4d3cd324afd0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Fileio/DB.java" afterPath="$PROJECT_DIR$/src/Fileio/DB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/AdminMenu/AdminMenu.fxml" afterPath="$PROJECT_DIR$/src/GUI/AdminMenu/AdminMenu.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/AdminMenu/AdminMenuController.java" afterPath="$PROJECT_DIR$/src/GUI/AdminMenu/AdminMenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenu.fxml" afterPath="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenu.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenuController.java" afterPath="$PROJECT_DIR$/src/GUI/CustomerMenu/CustomerMenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyTi/MyTiSystem.java" afterPath="$PROJECT_DIR$/src/MyTi/MyTiSystem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyTi/UsersData.java" afterPath="$PROJECT_DIR$/src/MyTi/UsersData.java" />
     </list>
     <ignored path="APAssignment2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1224,7 +1217,7 @@
       <workItem from="1476582580104" duration="2762000" />
       <workItem from="1476585660567" duration="1480000" />
       <workItem from="1476596342399" duration="7544000" />
-      <workItem from="1476612470195" duration="3000000" />
+      <workItem from="1476612470195" duration="3026000" />
     </task>
     <task id="LOCAL-00001" summary="add function">
       <created>1476601462870</created>
@@ -1240,11 +1233,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476611143926</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add function &#10;nearly finished">
+      <created>1476615541870</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1476615541870</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98023000" />
+    <option name="totallyTimeSpent" value="98049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="982" extended-state="0" />
@@ -1294,7 +1294,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add function" />
+    <MESSAGE value="add function &#10;nearly finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="add function &#10;nearly finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
