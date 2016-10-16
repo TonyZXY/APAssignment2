@@ -1329,6 +1329,13 @@ public class MyTiSystem {
             Calendar now = Calendar.getInstance();
             Calendar ticketTime = pass.getCalendar();
             int ticketType = pass.getTicketType();
+            int day = GUI.CustomerMenu.CustomerMenuController.dayswitch();
+            int time = GUI.CustomerMenu.CustomerMenuController.timeInput();
+            int hour = time / 100;
+            int min = time % 100;
+            now.set(Calendar.DAY_OF_WEEK,day);
+            now.set(Calendar.HOUR_OF_DAY,hour);
+            now.set(Calendar.MINUTE,min);
             int nowDate = now.get(Calendar.DAY_OF_YEAR);
             int ticketDate = ticketTime.get(Calendar.DAY_OF_YEAR);
             long nowSecend = now.getTimeInMillis();
@@ -1348,6 +1355,8 @@ public class MyTiSystem {
         }
         return valid;
     }
+
+
 
     private static boolean checkZoneValidDB(TravelPass pass, int startZone, int endZone) {
         boolean valid = false;

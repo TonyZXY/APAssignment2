@@ -38,12 +38,15 @@ public class CustomerMenuController {
     private TextArea area;
 
     @FXML
+    private static TextField timeField;
+
+    @FXML
     private TextField IDField;
     private String ID;
 
 
     @FXML
-    private ChoiceBox dayChioceBox;
+    private static ChoiceBox dayChioceBox;
 
     @FXML
     private RadioButton twoHours;
@@ -79,6 +82,41 @@ public class CustomerMenuController {
         } else {
             balanceLabel.setText("$" + balance);
         }
+    }
+
+    @FXML
+    public static int dayswitch(){
+        int dayint=0;
+        String day = dayChioceBox.getValue().toString();
+        switch(day){
+            case "Monday":
+                dayint = Calendar.MONDAY;
+                break;
+            case "Tuesday":
+                dayint = Calendar.TUESDAY;
+                break;
+            case "Wednesday":
+                dayint = Calendar.WEDNESDAY;
+                break;
+            case "Thursday":
+                dayint = Calendar.THURSDAY;
+                break;
+            case "Friday":
+                dayint =Calendar.FRIDAY;
+                break;
+            case "Saturady":
+                dayint = Calendar.SATURDAY;
+                break;
+            case "Sunday":
+                dayint = Calendar.SUNDAY;
+                break;
+        }
+        return dayint;
+    }
+
+    public static int timeInput(){
+        int timeInput = Integer.parseInt(timeField.getText().toString());
+        return timeInput;
     }
 
     @FXML
