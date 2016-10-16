@@ -138,11 +138,27 @@ public class CustomerMenuController {
     private void purchaseTravelPass() {
         int priceType = ticketType();
         Fileio.DB.purchaseTravelPass(ID,priceType);
+        area.appendText("you successfully purchase travel pass");
 //        double amount = MyTiSystem.getPrice(priceType);
 //        Calendar date = Calendar.getInstance();
 //        char type = Fileio.DB.getUserTypeDB(ID);
 //        Fileio.DB.purchase(ID, amount);
 //        Fileio.DB.addTravelPassDB(ID, priceType, type, date, amount);
+    }
+
+    @FXML
+    private void orderTravelPass(){
+        int priceType = ticketType();
+        Calendar date = Calendar.getInstance();
+        int day = dayswitch();
+        int time = timeInput();
+        int hour = time / 100;
+        int min = time % 100;
+        date.set(Calendar.DAY_OF_WEEK,day);
+        date.set(Calendar.HOUR_OF_DAY,hour);
+        date.set(Calendar.MINUTE,min);
+        Fileio.DB.orderTravelPass(ID,priceType,date);
+        area.appendText("you successfully order travel Pass");
     }
 
     @FXML

@@ -70,7 +70,8 @@ public class DB {
         try {
             Connection addTravel = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Timestamp ts = new Timestamp(date.getTimeInMillis());
-            String statement = "insert into travelpass values ( '" + travelPassID + "','" + priceType + "','" + price + "','" + type + "','" + ts + "');";
+            double rate = MyTi.UsersData.getRateDB(type);
+            String statement = "insert into travelpass values ( '" + travelPassID + "','" + priceType + "','" + price * rate + "','" + type + "','" + ts + "');";
             addTravel.prepareStatement(statement).execute();
             String statement2 = "insert into history values ('" + travelPassID + "','" + usersID + "');";
             addTravel.prepareStatement(statement2).execute();
@@ -81,20 +82,20 @@ public class DB {
         }
     }
 
-    public static void addTravelPassHistoryDB(String passid,String stationFrom,String stationTo){
+    public static void addTravelPassHistoryDB(String passid, String stationFrom, String stationTo) {
         Timestamp ts = new Timestamp(Calendar.getInstance().getTimeInMillis());
-        try{
+        try {
             Connection APH = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
-            String statement = "insert into travelpasshistory values('"+historyid+"','"+passid+"','"+stationFrom+"','"+stationTo+"','"+ts+"');";
+            String statement = "insert into travelpasshistory values('" + historyid + "','" + passid + "','" + stationFrom + "','" + stationTo + "','" + ts + "');";
             APH.prepareStatement(statement).execute();
             historyid++;
             APH.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void addNewUserDB(String userID, String userName, double balance, String email, char type) {
+    public static void addNewUserDB(String userID, String userName, double balance, String email, char type) {
         try {
             Connection addUser = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             String statement = "insert into users ( '" + userID + "','" + userName + "','" + balance + "','" + email + "','" + type + "');";
@@ -116,17 +117,17 @@ public class DB {
         }
     }
 
-    public static String getPassid(String id){
+    public static String getPassid(String id) {
         String passid = null;
-        try{
+        try {
             Connection getpassid = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Statement st = getpassid.createStatement();
-            ResultSet rs = st.executeQuery("SELECT max(passid) from history where userid ='"+id+"';");
-            while (rs.next()){
+            ResultSet rs = st.executeQuery("SELECT max(passid) from history where userid ='" + id + "';");
+            while (rs.next()) {
                 passid = rs.getString(1);
             }
             getpassid.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return passid;
@@ -206,9 +207,9 @@ public class DB {
         }
     }
 
-    public static TravelPass getTravelPass(String id){
+    public static TravelPass getTravelPass(String id) {
         TravelPass pass = null;
-        try{
+        try {
             double price = 0;
             int type = 0;
             Timestamp time = null;
@@ -216,16 +217,16 @@ public class DB {
             Calendar date = Calendar.getInstance();
             Connection tpg = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
             Statement st = tpg.createStatement();
-            ResultSet rs = st.executeQuery("Select travelpass.price,travelpass.tickettype,travelpass.time,travelpass.pricetype FROM history,travelpass WHERE userid='"+id+"' and select max(passid);");
-            while (rs.next()){
+            ResultSet rs = st.executeQuery("Select travelpass.price,travelpass.tickettype,travelpass.time,travelpass.pricetype FROM history,travelpass WHERE userid='" + id + "' and select max(passid);");
+            while (rs.next()) {
                 price = rs.getDouble(1);
                 type = rs.getInt(2);
                 time = rs.getTimestamp(3);
                 pricetype = rs.getString(4).charAt(0);
                 date.setTimeInMillis(time.getTime());
             }
-            pass=new TravelPass(date,type,null,pricetype,price);
-        }catch (Exception e){
+            pass = new TravelPass(date, type, null, pricetype, price);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return pass;
@@ -291,7 +292,7 @@ public class DB {
         return report;
     }
 
-    public static void purchase(String ID, double amount) {
+    public static void purchase(String ID, double amount, char type) {
         double balance = 0;
         try {
             Connection purchase = DriverManager.getConnection("jdbc:hsqldb:TestDB", "sa", "123");
@@ -300,7 +301,8 @@ public class DB {
             while (rs.next()) {
                 balance = rs.getDouble(1);
             }
-            double addBalance = balance - amount;
+            double rate = MyTi.UsersData.getRateDB(type);
+            double addBalance = balance - amount * rate;
             String statement1 = "UPDATE users SET balance=" + "'" + addBalance + "'" + " where userid =" + "'" + ID + "';";
             st.executeUpdate(statement1);
             purchase.close();
@@ -367,12 +369,18 @@ public class DB {
     }
 
 
-
     public static void purchaseTravelPass(String ID, int ticketType) {
         double amount = MyTiSystem.getPrice(ticketType);
         Calendar date = Calendar.getInstance();
         char type = getUserTypeDB(ID);
-        purchase(ID, amount);
+        purchase(ID, amount, type);
+        addTravelPassDB(ID, ticketType, type, date, amount);
+    }
+
+    public static void orderTravelPass(String ID, int ticketType, Calendar date) {
+        double amount = MyTiSystem.getPrice(ticketType);
+        char type = getUserTypeDB(ID);
+        purchase(ID, amount, type);
         addTravelPassDB(ID, ticketType, type, date, amount);
     }
 

@@ -125,6 +125,26 @@ public class UsersData {
         return rate;
     }
 
+    public static double getRateDB(char type){
+        double rate = 1;
+        Calendar date = Calendar.getInstance();
+        if (type == 'A') {
+            rate = Arate;
+        }
+        if (type == 'C') {
+            rate = Jrate;
+        }
+        if (type == 'S') {
+            rate = Srate;
+//        }if(type =='C'&&date.get(Calendar.DAY_OF_WEEK)==Calendar.SUNDAY){
+//            rate = 0.0;
+        }
+        if (type == 'S' && date.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) {
+            rate = SSrate;
+        }
+        return rate;
+    }
+
 //    static Hashmap<String,> history = new HashMap<>();
 
     // this is stations data storage

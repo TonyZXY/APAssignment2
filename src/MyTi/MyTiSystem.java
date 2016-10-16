@@ -12,20 +12,27 @@ import MyTi.TravelPassHistory.TravelPassHistory;
  * Created by TonyZheng on 24/9/16.
  */
 public class MyTiSystem {
-    private void setZoneOneOneDayPassPrice(double zoneOneOneDayPassPrice) {
-        this.zoneOneOneDayPassPrice = zoneOneOneDayPassPrice;
+    private static void setZoneOneOneDayPassPrice(double zoneOneOneDayPassPrice) {
+        MyTiSystem.zoneOneOneDayPassPrice = zoneOneOneDayPassPrice;
     }
 
-    private void setZoneOneTwoHoursPassPrice(double zoneOneTwoHoursPassPrice) {
-        this.zoneOneTwoHoursPassPrice = zoneOneTwoHoursPassPrice;
+    private static void setZoneOneTwoHoursPassPrice(double zoneOneTwoHoursPassPrice) {
+        MyTiSystem.zoneOneTwoHoursPassPrice = zoneOneTwoHoursPassPrice;
     }
 
-    private void setZoneTwoOneDayPassPrice(double zoneTwoOneDayPassPrice) {
-        this.zoneTwoOneDayPassPrice = zoneTwoOneDayPassPrice;
+    private static void setZoneTwoOneDayPassPrice(double zoneTwoOneDayPassPrice) {
+        MyTiSystem.zoneTwoOneDayPassPrice = zoneTwoOneDayPassPrice;
     }
 
-    private void setZoneTwoTwoHoursPassPrice(double zoneTwoTwoHoursPassPrice) {
-        this.zoneTwoTwoHoursPassPrice = zoneTwoTwoHoursPassPrice;
+    private static void setZoneTwoTwoHoursPassPrice(double zoneTwoTwoHoursPassPrice) {
+        MyTiSystem.zoneTwoTwoHoursPassPrice = zoneTwoTwoHoursPassPrice;
+    }
+
+    public static void change(double Z12H,double Z11D,double Z22H,double Z21D){
+        setZoneOneOneDayPassPrice(Z11D);
+        setZoneOneTwoHoursPassPrice(Z12H);
+        setZoneTwoOneDayPassPrice(Z21D);
+        setZoneTwoTwoHoursPassPrice(Z22H);
     }
 
     private static double zoneOneOneDayPassPrice = 6.9;

@@ -32,9 +32,9 @@
                         <Label layoutX="266.0" layoutY="73.0" text="Pass Length" />
                         <Label layoutX="266.0" layoutY="176.0" text="Pass Type" />
                         <Label layoutX="44.0" layoutY="260.0" text="Day" />
-                        <TextField layoutX="196.0" layoutY="289.0" prefHeight="27.0" prefWidth="94.0" promptText="HHMM" />
+                        <TextField fx:id="timeField" layoutX="196.0" layoutY="289.0" prefHeight="27.0" prefWidth="94.0" promptText="HHMM" />
                         <Label layoutX="196.0" layoutY="260.0" text="Time" />
-                        <TextArea layoutX="212.0" layoutY="373.0" prefHeight="120.0" prefWidth="259.0" />
+                        <TextArea fx:id="area" layoutX="212.0" layoutY="373.0" prefHeight="120.0" prefWidth="259.0" />
                         <Button layoutX="39.0" layoutY="420.0" mnemonicParsing="false" onAction="#useTravelPass" text="Add Jounary" />
                         <Button layoutX="39.0" layoutY="466.0" mnemonicParsing="false" onAction="#purchaseTravelPass" text="Purchase Pass" />
                         <ComboBox fx:id="stationFrom" layoutX="39.0" layoutY="98.0" prefHeight="27.0" prefWidth="170.0" />
@@ -60,6 +60,7 @@
                             </children>
                         </VBox>
                         <ChoiceBox fx:id="dayChioceBox" layoutX="44.0" layoutY="289.0" prefHeight="27.0" prefWidth="104.0" />
+                  <Button layoutX="39.0" layoutY="373.0" mnemonicParsing="false" onAction="#orderTravelPass" text="Order pass" />
                     </children>
                 </AnchorPane>
             </items>
